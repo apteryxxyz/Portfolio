@@ -65,5 +65,25 @@ export default [
                 target: '_blank',
             }
         ]
+    },
+    {
+        id: 'self',
+        name: 'apteryx.xyz',
+        description: 'My personal website, built using React and Next.js',
+        primaryColor: '#610909',
+        secondaryColor: '#8c0f0f',
+        tertiaryColor: '#a12006',
+        technologies: [
+            [<FaReact />, 'React'],
+            [<FaJs />, 'JavaScript'],
+            [<SiNextdotjs />, 'Next.js'],
+        ],
+        buttons: [
+            {
+                text: 'Source',
+                href: 'https://github.com/apteryxxyz/apteryx.xyz',
+                target: '_blank',
+            }
+        ]
     }
 ];
