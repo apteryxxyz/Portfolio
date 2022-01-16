@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "My personal website",
     "scripts": {
-        "serve": "serve -s out/ -l 3001",
+        "serve": "next start -p 3001",
         "start": "pm2 start npm --name=apteryx.xyz -- run serve",
         "restart": "pm2 restart apteryx.xyz",
         "stop": "pm2 stop apteryx.xyz",
