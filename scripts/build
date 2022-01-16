@@ -10,7 +10,7 @@ case "${SYSTEM}" in
 esac
 
 echo "Building for ${SYSTEM}"
-npx next build && npx next export
+npx next build
 
 if [ $SYSTEM == "LINUX" ]; then
     echo "Restarting NGINX"
