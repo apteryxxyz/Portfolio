@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SYSTEM="$(uname -s)"
+case "${SYSTEM}" in
+    Linux*)    SYSTEM="LINUX";;
+    Darwin*)   SYSTEM="MAC";;
+    CYGWIN*)   SYSTEM="WINDOWS";;
+    MINGW*)    SYSTEM="WINDOWS";;
+    *)         SYSTEM="UNKNOWN";;
+esac
+
+echo "Building for ${SYSTEM}"
+npx next build && npx next export
+
+if [ $SYSTEM == "LINUX" ]; then
+    echo "Restarting NGINX"
+    sudo cp nginx.conf /etc/nginx/sites-available/apteryx
+    sudo systemctl restart nginx
+else
+    echo "Skipping NGINX setup"
+fi
