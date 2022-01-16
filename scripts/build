@@ -14,7 +14,7 @@ npx next build && npx next export
 
 if [ $SYSTEM == "LINUX" ]; then
     echo "Restarting NGINX"
-    sudo cp nginx.conf /etc/nginx/sites-available/apteryx
+    sudo cp nginx.conf /etc/nginx/sites-enabled/apteryx.xyz
     sudo systemctl restart nginx
 else
     echo "Skipping NGINX setup"
