@@ -5,27 +5,9 @@ import { SiNextdotjs, SiExpress, SiAndroid, SiVisualstudio, SiExpo, SiTypescript
 import { GrRaspberry } from 'react-icons/gr';
 import { DiMongodb, DiNpm } from 'react-icons/di';
 
-// export default [
-//     [<FaHtml5 />, 'HTML'],
-//     [<FaCss3Alt />, 'CSS'],
-//     [<FaJs />, 'JavaScript'],
-//     [<FaNodeJs />, 'Node.js'],
-//     [<SiNextdotjs />, 'Next.js'],
-//     [<SiExpress />, 'Express'],
-//     [<SiAndroid />, 'Android'],
-//     [<SiVisualstudio />, 'Visual Basic'],
-//     [<GrRaspberry />, 'Raspberry Pi'],
-//     [<FaReact />, 'React'],
-//     [<FaReact />, 'React Native'],
-//     [<DiMongodb />, 'MongoDB'],
-//     [<SiExpo />, 'Expo'],
-//     [<DiNpm />, 'NPM'],
-//     [<SiTypescript />, 'TypeScript'],
-// ];
-
 export default [
     {
-        id: 'dvau',
+        id: 'darkviperau',
         name: 'DarkViperAU Soundboard',
         types: ['app'],
         description: 'More than 70 audio clips from the greatest GTA 5 speedrunner',
@@ -37,6 +19,7 @@ export default [
             [<FaJs />, 'JavaScript'],
             [<SiAndroid />, 'Android'],
             [<SiExpo />, 'Expo'],
+            [<FaNodeJs />, 'Node.js'],
         ],
         buttons: [
             {
@@ -57,6 +40,8 @@ export default [
         technologies: [
             [<FaReact />, 'React'],
             [<FaJs />, 'JavaScript'],
+            [<SiExpress />, 'Express'],
+            [<FaNodeJs />, 'Node.js'],
         ],
         buttons: [
             {
@@ -77,6 +62,7 @@ export default [
             [<FaReact />, 'React'],
             [<FaJs />, 'JavaScript'],
             [<SiNextdotjs />, 'Next.js'],
+            [<FaNodeJs />, 'Node.js'],
         ],
         buttons: [
             {
