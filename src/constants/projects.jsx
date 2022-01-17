@@ -26,6 +26,11 @@ export default [
                 text: 'Google Play',
                 href: 'https://play.google.com/store/apps/details?id=com.blackbox.darkviperau',
                 target: '_blank',
+            },
+            {
+                text: 'Galaxy Store',
+                href: 'https://galaxystore.samsung.com/detail/com.blackbox.darkviperau',
+                target: '_blank',
             }
         ]
     },
