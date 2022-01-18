@@ -7,8 +7,8 @@ import SKILLS from '../constants/skills';
 
 export default function Home() {
     return <>
-        <NavigationBar links={[['#links', 'Links'], ['#skills', 'Skills'], ['/projects#top', 'Projects']]} />
-        <Container id='top'>
+        <NavigationBar links={[['#links', 'Links'], ['#skills', 'Skills'], ['/projects', 'Projects']]} />
+        <Container>
             <Section color='#610909'>
                 <Wave color='black' percent={150} />
                 <h1>Apteryx</h1>

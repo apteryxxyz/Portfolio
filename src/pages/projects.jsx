@@ -7,8 +7,8 @@ import PROJECTS from '../constants/projects';
 
 export default function Projects() {
     return <>
-        <NavigationBar links={[['/#links', 'Links'], ['/#skills', 'Skills'], ['/projects#top', 'Projects']]} />
-        <Container id='top'>
+        <NavigationBar links={[['/#links', 'Links'], ['/#skills', 'Skills'], ['/projects', 'Projects']]} />
+        <Container>
             {PROJECTS
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((project, i) => (<Section id={project.id} key={project.id} color={project.primaryColor}>
