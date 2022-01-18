@@ -18,4 +18,6 @@ if [ $SYSTEM == "LINUX" ]; then
     sudo systemctl restart nginx
 else
     echo "Skipping NGINX setup"
+    echo "Generating sitemap and robots.txt"
+    npx next-sitemap --config next.config.js
 fi

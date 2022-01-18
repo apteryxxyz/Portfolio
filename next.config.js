@@ -1,4 +1,6 @@
 module.exports = {
+    siteUrl: 'https://apteryx.xyz/',
+    generateRobotsTxt: true,
     async redirects() {
         return [
             {

@@ -9,7 +9,7 @@
         "stop": "pm2 stop apteryx.xyz",
         "dev": "next dev",
         "build": "scripts/build",
-        "pull": "git reset --hard && git pull"
+        "pull": "git reset --hard && git pull && chmod +x scripts/*"
     },
     "dependencies": {
         "next": "^12.0.7",
@@ -21,6 +21,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.16.7",
-        "babel-plugin-styled-components": "^2.0.2"
+        "babel-plugin-styled-components": "^2.0.2",
+        "next-sitemap": "^1.9.12"
     }
 }

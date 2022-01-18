@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.16.7
   babel-plugin-styled-components: ^2.0.2
   next: ^12.0.7
+  next-sitemap: ^1.9.12
   react: ^17.0.2
   react-dom: ^17.0.2
   react-icons: ^4.3.1
@@ -21,6 +22,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.16.7
   babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
+  next-sitemap: 1.9.12_next@12.0.8
 
 packages:
 
@@ -252,6 +254,10 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
+
+  /@corex/deepmerge/2.6.148:
+    resolution: {integrity: sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==}
+    dev: true
 
   /@emotion/is-prop-valid/0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
@@ -608,6 +614,18 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: false
+
+  /next-sitemap/1.9.12_next@12.0.8:
+    resolution: {integrity: sha512-kHXf4ZNAGLJyK16HbjzE5X9JlKwXtxW+9J4dh3oT7LSbU/+3bN+VqWjNw/776Otbanf7EJsvl51oQ78qQW5XBQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 2.6.148
+      minimist: 1.2.5
+      next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
+    dev: true
 
   /next/12.0.8_dfc0b93d99fba272c9564d3139a2581a:
     resolution: {integrity: sha512-g5c1Kuh1F8tSXJn2rVvzYBzqe9EXaR6+rY3/KrQ7y0D9FueRLfHI35wM0DRadDcPSc3+vncspfhYH3jnYE/KjA==}
