@@ -10,13 +10,13 @@ export default function Home() {
         <NavigationBar links={[['#links', 'Links'], ['#skills', 'Skills'], ['/projects', 'Projects']]} />
         <Container>
             <Section color='#610909'>
-                <Wave color='black' percent={150} />
+                <Wave color='black' percent={100} />
                 <h1>Apteryx</h1>
                 <p>A Kiwi Software Developer</p>
             </Section>
 
             <Section id='links' color='#8c0f0f'>
-                <Wave color='#610909' percent={220} />
+                <Wave color='#610909' percent={125} />
                 <h1>Link Tree</h1>
                 <ButtonContainer>
                     <Button href='/github' target='_blank'>GitHub</Button>
@@ -26,7 +26,7 @@ export default function Home() {
             </Section>
 
             <Section id='skills' color='#a12006'>
-                <Wave color='#8c0f0f' percent={300} />
+                <Wave color='#8c0f0f' percent={150} />
                 <h1>Skills</h1>
                 <SkillsGrid>
                     {SKILLS

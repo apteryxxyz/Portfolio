@@ -12,7 +12,7 @@ export default function Projects() {
             {PROJECTS
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((project, i) => (<Section id={project.id} key={project.id} color={project.primaryColor}>
-                    <Wave color={i === 0 ? 'black' : PROJECTS[i - 1].primaryColor} percent={(i + 1) * 100} />
+                    <Wave color={i === 0 ? 'black' : PROJECTS[i - 1].primaryColor} percent={i * 25 + 100} />
                     <h1>{project.name}</h1>
                     <p>{project.description}</p>
                     <SkillsGrid>
