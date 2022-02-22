@@ -14,11 +14,7 @@ export default class _Document extends Document {
                         sheet.collectStyles(<App {...props} />),
                 })
 
-<<<<<<< HEAD
-            const initialProps = await Document.getInitialProps(ctx)
-=======
             const initialProps = await Document.getInitialProps(ctx);
->>>>>>> 7629631 (🎉 Rewrite using blitz)
             return {
                 ...initialProps,
                 styles: (
@@ -32,8 +28,4 @@ export default class _Document extends Document {
             sheet.seal()
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7629631 (🎉 Rewrite using blitz)
