@@ -1,10 +1,15 @@
 {
     "name": "apteryx.xyz",
     "version": "1.0.0",
+    "private": true,
     "scripts": {
+        "serve": "blitz start -p 3001",
+        "start": "pm2 start npm --name=apteryx.xyz -- run serve",
+        "restart": "pm2 restart apteryx.xyz",
+        "stop": "pm2 stop apteryx.xyz",
         "dev": "blitz dev",
         "build": "bash scripts/build",
-        "start": "blitz start"
+        "pull": "git reset --hard && git pull && chmod +x scripts/"
     },
     "dependencies": {
         "blitz": "0.45.3",
@@ -14,10 +19,8 @@
         "react-is": "^17.0.2",
         "styled-components": "^5.3.3"
     },
-    "private": true,
     "devDependencies": {
         "@babel/core": "^7.17.5",
-        "@babel/preset-env": "^7.16.11",
         "eslint": "^8.9.0"
     }
 }
