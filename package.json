@@ -8,11 +8,16 @@
     },
     "dependencies": {
         "blitz": "0.45.3",
-        "react": "18.0.0-beta-149b420f6-20211119",
-        "react-dom": "18.0.0-alpha-5ca4b0433-20211020",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "react-icons": "^4.3.1",
+        "react-is": "^17.0.2",
         "styled-components": "^5.3.3"
     },
     "private": true,
-    "devDependencies": {}
+    "devDependencies": {
+        "@babel/core": "^7.17.5",
+        "@babel/preset-env": "^7.16.11",
+        "eslint": "^8.9.0"
+    }
 }
