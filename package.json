@@ -1,27 +1,18 @@
 {
     "name": "apteryx.xyz",
     "version": "1.0.0",
-    "description": "My personal website",
     "scripts": {
-        "serve": "next start -p 3001",
-        "start": "pm2 start npm --name=apteryx.xyz -- run serve",
-        "restart": "pm2 restart apteryx.xyz",
-        "stop": "pm2 stop apteryx.xyz",
-        "dev": "next dev",
-        "build": "scripts/build",
-        "pull": "git reset --hard && git pull && chmod +x scripts/*"
+        "dev": "blitz dev",
+        "build": "bash scripts/build",
+        "start": "blitz start"
     },
     "dependencies": {
-        "next": "^12.0.7",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
+        "blitz": "0.45.3",
+        "react": "18.0.0-beta-149b420f6-20211119",
+        "react-dom": "18.0.0-alpha-5ca4b0433-20211020",
         "react-icons": "^4.3.1",
-        "react-is": "^17.0.2",
         "styled-components": "^5.3.3"
     },
-    "devDependencies": {
-        "@babel/core": "^7.16.7",
-        "babel-plugin-styled-components": "^2.0.2",
-        "next-sitemap": "^1.9.12"
-    }
+    "private": true,
+    "devDependencies": {}
 }

@@ -1,37 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wave } from '../components/Curve';
-import NavigationBar from '../components/NavigationBar';
-import SKILLS from '../constants/skills';
+import { Wave } from '~components/Curve';
+import NavigationBar from '~components/NavigationBar';
+import SKILLS from '~constants/SKILLS';
 
 export default function Home() {
     return <>
-        <NavigationBar links={[['#links', 'Links'], ['#skills', 'Skills'], ['/projects', 'Projects']]} />
+        <NavigationBar links={[
+            ['#links', 'Link'],
+            ['#skills', 'Skills'],
+            ['/projects', 'Projects'],
+        ]} />
+
         <Container>
             <Section color='#610909'>
-                <Wave color='black' percent={100} />
+                <Wave color='black' precent={100} />
                 <h1>Apteryx</h1>
                 <p>A Kiwi Software Developer</p>
             </Section>
 
             <Section id='links' color='#8c0f0f'>
-                <Wave color='#610909' percent={125} />
+                <Wave color='#610909' precent={125} />
                 <h1>Link Tree</h1>
                 <ButtonContainer>
-                    <Button href='/github' target='_blank'>GitHub</Button>
-                    <Button href='/youtube' target='_blank'>YouTube</Button>
+                    <Button href='/github' target='_blank'>Github</Button>
+                    <Button href='/youtube' target='_blank'>Youtube</Button>
                     <Button href='/twitter' target='_blank'>Twitter</Button>
                 </ButtonContainer>
             </Section>
 
             <Section id='skills' color='#a12006'>
-                <Wave color='#8c0f0f' percent={150} />
+                <Wave color='#8c0f0f' precent={150} />
                 <h1>Skills</h1>
                 <SkillsGrid>
                     {SKILLS
                         .sort((a, b) => a[1].localeCompare(b[1]))
-                        .map(([icon, title]) => <Skill key={title} icon={icon} title={title} />)}
+                        .map(([icon, name]) =>
+                            <Skill key={name} icon={icon} name={name} />)}
                 </SkillsGrid>
             </Section>
         </Container>
@@ -92,9 +98,9 @@ const SkillContainer = styled.div`
     }
 `;
 
-function Skill({ icon, title }) {
+function Skill({ icon, name }) {
     return <SkillContainer>
-        {icon} {title}
+        {icon} {name}
     </SkillContainer>
 }
 

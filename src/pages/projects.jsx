@@ -1,38 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wave } from '../components/Curve';
-import NavigationBar from '../components/NavigationBar';
-import PROJECTS from '../constants/projects';
+import { Wave } from '~components/Curve';
+import NavigationBar from '~components/NavigationBar';
+import PROJECTS from '~constants/PROJECTS';
 
 export default function Projects() {
     return <>
-        <NavigationBar links={[['/#links', 'Links'], ['/#skills', 'Skills'], ['/projects', 'Projects']]} />
+        <NavigationBar links={[
+            ['/#links', 'Link'],
+            ['/#skills', 'Skills'],
+            ['', 'Projects'],
+        ]} />
+
         <Container>
             {PROJECTS
                 .sort((a, b) => a.name.localeCompare(b.name))
-                .map((project, i) => (<Section id={project.id} key={project.id} color={project.primaryColor}>
-                    <Wave color={i === 0 ? 'black' : PROJECTS[i - 1].primaryColor} percent={i * 25 + 100} />
-                    <h1>{project.name}</h1>
-                    <p>{project.description}</p>
-                    <SkillsGrid>
-                        {project.technologies
-                            .sort((a, b) => a[1].localeCompare(b[1]))
-                            .map(([icon, title]) => <Skill icon={icon} title={title} />)}
-                    </SkillsGrid>
-
-                    <ButtonContainer>
-                        {project.buttons.map(button => (
-                            <Button
-                                key={button.href}
-                                href={button.href}
-                                target={button.target}
-                                color={project.secondaryColor}
-                                hoverColor={project.tertiaryColor}
-                            >{button.text}</Button>
-                        ))}
-                    </ButtonContainer>
-                </Section>))}
+                .map((project, i) => <Project {...project} key={i} i={i} />)}
         </Container>
     </>
 }
@@ -88,9 +72,9 @@ const SkillContainer = styled.div`
     }
 `;
 
-function Skill({ icon, title }) {
+function Skill({ icon, name }) {
     return <SkillContainer>
-        {icon} {title}
+        {icon} {name}
     </SkillContainer>
 }
 
@@ -115,3 +99,26 @@ const Button = styled.a`
         background-color: ${props => props.hoverColor};
     }
 `;
+
+function Project({ i, id, ...project }) {
+    return <Section id={id} color={project.primaryColor}>
+        <Wave color={i === 0 ? 'black' : PROJECTS[i - 1].primaryColor} percent={i * 25 + 100} />
+        <h1>{project.name}</h1>
+        <p>{project.description}</p>
+        <SkillsGrid>
+            {project.technologies
+                .sort((a, b) => a[1].localeCompare(b[1]))
+                .map(([icon, name], i) => <Skill key={i} icon={icon} name={name} />)}
+        </SkillsGrid>
+
+        <ButtonContainer>
+            {project.buttons.map((button, i) => <Button
+                key={i}
+                href={button.disabled ? undefined : button.href}
+                target={button.target}
+                color={project.secondaryColor}
+                hoverColor={project.tertiaryColor}
+            >{button.text}</Button>)}
+        </ButtonContainer>
+    </Section>
+}
