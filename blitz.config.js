@@ -17,6 +17,11 @@ module.exports = {
                 source: '/twitter',
                 destination: 'https://twitter.com/apteryxxyz',
                 permanent: false
+            },
+            {
+                source: '/discord',
+                destination: 'https://discord.gg/vZQbMhwsKY',
+                permanent: false
             }
         ]
     },
