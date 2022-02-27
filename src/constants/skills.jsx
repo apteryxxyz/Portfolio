@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDiscord } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiAndroid, SiVisualstudio, SiExpo, SiTypescript } from 'react-icons/si';
 import { GrRaspberry } from 'react-icons/gr';
 import { DiMongodb, DiNpm } from 'react-icons/di';
@@ -21,5 +21,4 @@ export default [
     [<SiExpo />, 'Expo'],
     [<DiNpm />, 'NPM'],
     [<SiTypescript />, 'TypeScript'],
-    [<FaDiscord />, 'Discord.js'],
 ];
