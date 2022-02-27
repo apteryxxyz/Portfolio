@@ -118,7 +118,7 @@ export default [
         buttons: [
             {
                 text: 'Add to Server',
-                href: 'https://discord.com/api/oauth2/authorize?client_id=723180989841009408&permissions=8&scope=bot',
+                href: 'https://discord.com/api/oauth2/authorize?client_id=946755134443102258&permissions=0&scope=bot%20applications.commands',
                 target: '_blank',
             }
         ]
