@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Wave } from '~components/Curve';
 import NavigationBar from '~components/NavigationBar';
-import PROJECTS from '~constants/PROJECTS';
+import PROJECTS from '~constants/projects';
 
 export default function Projects() {
     return <>
