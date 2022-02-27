@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaDiscord } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiAndroid, SiVisualstudio, SiExpo, SiTypescript } from 'react-icons/si';
 import { GrRaspberry } from 'react-icons/gr';
 import { DiMongodb, DiNpm } from 'react-icons/di';
@@ -72,7 +72,7 @@ export default [
         ],
         buttons: [
             {
-                text: 'GitHub',
+                text: 'Source Code',
                 href: 'https://github.com/apteryxxyz/apteryx.xyz',
                 target: '_blank',
             }
@@ -92,15 +92,35 @@ export default [
         ],
         buttons: [
             {
-                text: 'GitHub',
+                text: 'Source Code',
                 href: 'https://github.com/apteryxxyz/tuhi',
                 target: '_blank',
             },
             {
-                text: 'NPM',
+                text: 'NPM Package',
                 href: 'https://www.npmjs.com/package/tuhi',
                 target: '_blank',
             },
         ]
+    },
+    {
+        id: 'evaluate',
+        name: 'Evaluate',
+        description: 'Evaluate any code in over 70 different programming languages. Save code as snippets for lately use or create custom commands in a language you know!',
+        primaryColor: '#458b00',
+        secondaryColor: '#659d32',
+        tertiaryColor: '#5ceb3c',
+        technologies: [
+            [<FaJs />, 'JavaScript'],
+            [<FaNodeJs />, 'Node.js'],
+            [<FaDiscord />, 'Discord.js'],
+        ],
+        buttons: [
+            {
+                text: 'Add to Server',
+                href: 'https://discord.com/api/oauth2/authorize?client_id=946755134443102258&permissions=0&scope=bot%20applications.commands',
+                target: '_blank',
+            },
+        ],
     }
 ];
