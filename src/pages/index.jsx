@@ -24,6 +24,7 @@ export default function Home() {
                 <Wave color='#610909' precent={125} />
                 <h1>Link Tree</h1>
                 <ButtonContainer>
+                    <Button href='/discord' target='_blank'>Discord</Button>
                     <Button href='/github' target='_blank'>Github</Button>
                     <Button href='/youtube' target='_blank'>Youtube</Button>
                     <Button href='/twitter' target='_blank'>Twitter</Button>
