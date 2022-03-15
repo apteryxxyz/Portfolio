@@ -8,7 +8,7 @@ import SKILLS from '~constants/skills';
 export default function Home() {
     return <>
         <NavigationBar links={[
-            ['#links', 'Link'],
+            ['#links', 'Links'],
             ['#skills', 'Skills'],
             ['/projects', 'Projects'],
         ]} />
