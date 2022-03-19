@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Head, Router } from 'blitz';
-import '~styles/index.css';
+import 'app/styles/index.css';
 
 export default function App({ Component, pageProps }) {
     useEffect(() => {

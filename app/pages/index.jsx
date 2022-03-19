@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wave } from '~components/Curve';
-import NavigationBar from '~components/NavigationBar';
-import SKILLS from '~constants/skills';
+import { Wave } from 'app/components/Curve';
+import NavigationBar from 'app/components/NavigationBar';
+import SKILLS from 'app/constants/skills';
 
 export default function Home() {
     return <>

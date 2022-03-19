@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Wave } from '~components/Curve';
-import NavigationBar from '~components/NavigationBar';
-import PROJECTS from '~constants/projects';
+import { Wave } from 'app/components/Curve';
+import NavigationBar from 'app/components/NavigationBar';
+import PROJECTS from 'app/constants/projects';
 
 export default function Projects() {
     return <>
