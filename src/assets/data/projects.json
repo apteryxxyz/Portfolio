@@ -1,0 +1,41 @@
+[
+    {
+        "id": "self",
+        "index": 1,
+        "name": "apteryx.xyz",
+        "description": "My personal website, built using Vue and Nuxt",
+        "technologies": [
+            ["vue", "Vue"],
+            ["nuxt", "Nuxt"]
+        ],
+        "buttons": [
+            {
+                "text": "Source Code",
+                "url": "https://github.com/apteryxxyz/apteryx.xyz",
+                "target": "_blank"
+            }
+        ]
+    },
+    {
+        "id": "covid",
+        "index": 2,
+        "name": "COVID in New Zealand",
+        "description": "A detailed source for information related to the current state of COVID-19 in New Zealand",
+        "technologies": [
+            ["react", "React"],
+            ["next", "Next"]
+        ],
+        "buttons": [
+            {
+                "text": "Visit",
+                "url": "https://covidinnz.com",
+                "target": "_blank"
+            },
+            {
+                "text": "GitHub",
+                "url": "https://github.com/covidinnz",
+                "target": "_blank"
+            }
+        ]
+    }
+]

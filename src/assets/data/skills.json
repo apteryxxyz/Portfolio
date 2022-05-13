@@ -1,0 +1,57 @@
+[
+    {
+        "name": "JavaScript",
+        "type": "language",
+        "icon": "javascript"
+    },
+    {
+        "name": "TypeScript",
+        "type": "language",
+        "icon": "typescript"
+    },
+    {
+        "name": "HTML",
+        "type": "language",
+        "icon": "html"
+    },
+    {
+        "name": "CSS",
+        "type": "language",
+        "icon": "css"
+    },
+    {
+        "name": "Visual Basic",
+        "type": "language",
+        "icon": "visual-basic"
+    },
+    {
+        "name": "MongoDB",
+        "type": "database",
+        "icon": "mongodb"
+    },
+    {
+        "name": "React",
+        "type": "framework",
+        "icon": "react"
+    },
+    {
+        "name": "Next",
+        "type": "framework",
+        "icon": "next"
+    },
+    {
+        "name": "Vue",
+        "type": "framework",
+        "icon": "vue"
+    },
+    {
+        "name": "Nuxt",
+        "type": "framework",
+        "icon": "nuxt"
+    },
+    {
+        "name": "React Native",
+        "type": "framework",
+        "icon": "react"
+    }
+]
