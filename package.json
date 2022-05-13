@@ -15,7 +15,7 @@
         "start": "pm2 start npm --name=apteryx -- run serve",
         "restart": "pm2 restart apteryx",
         "stop": "pm2 stop apteryx",
-        "pull": "pm2 reset --hard && git pull && yarn && yarn build && yarn restart",
+        "pull": "git reset --hard && git pull && yarn && yarn build && yarn restart",
         "update:nginx": "cp nginx.conf /etc/nginx/sites-enabled/apteryx.xyz"
     },
     "lint-staged": {
