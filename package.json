@@ -11,7 +11,7 @@
         "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
         "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
         "build": "nuxt build",
-        "serve": "nuxt start -p 3001",
+        "serve": "cross-env PORT=3000 nuxt start",
         "start": "pm2 start npm --name=apteryx -- run serve",
         "restart": "pm2 restart apteryx",
         "stop": "pm2 stop apteryx",
