@@ -10,7 +10,7 @@
         ],
         "buttons": [
             {
-                "text": "Source Code",
+                "text": "GitHub",
                 "url": "https://github.com/apteryxxyz/apteryx.xyz",
                 "target": "_blank"
             }
@@ -34,6 +34,22 @@
             {
                 "text": "GitHub",
                 "url": "https://github.com/covidinnz",
+                "target": "_blank"
+            }
+        ]
+    },
+    {
+        "id": "maclary",
+        "index": 3,
+        "name": "Maclary",
+        "description": "A Discord.js framework plus a suite of extermely useful tools and utilities",
+        "technologies": [
+            ["typescript", "TypeScript"]
+        ],
+        "buttons": [
+            {
+                "text": "GitHub",
+                "url": "https://github.com/maclary",
                 "target": "_blank"
             }
         ]
