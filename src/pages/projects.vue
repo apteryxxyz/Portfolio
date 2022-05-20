@@ -84,7 +84,7 @@ export default {
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 769) {
     #grid {
         grid-template-columns: 1fr;
     }
@@ -99,6 +99,10 @@ export default {
 
 .tech-group div {
     padding: 20px;
+}
+
+.tech-group div * {
+    padding-right: 10px;
 }
 
 .button-group a {
