@@ -161,13 +161,13 @@ export default {
     padding-right: 10px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
     #timeline {
         grid-template-columns: 20% 80%;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 769px) {
     #container section {
         margin: 50px 10%;
     }

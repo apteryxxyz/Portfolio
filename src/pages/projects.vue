@@ -7,23 +7,25 @@ import projects from '@/assets/data/projects.json';
         <Navbar />
 
         <div id="container" class="gradient">
-            <section v-for="(project, index) in projects" :key="index" class="project">
-                <h1>{{ project.name }}</h1>
-                <p>{{ project.description }}</p>
+            <div id="grid">
+                <section v-for="(project, index) in projects" :key="index" class="project">
+                    <h1>{{ project.name }}</h1>
+                    <p>{{ project.description }}</p>
 
-                <div class="tech-group">
-                    <div v-for="(tech, index2) in project.technologies" :key="index2">
-                        <nuxt-icon :name="tech[0]" />
-                        <span>{{ tech[1] }}</span>
+                    <div class="tech-group">
+                        <div v-for="(tech, index2) in project.technologies" :key="index2">
+                            <nuxt-icon :name="tech[0]" />
+                            <span>{{ tech[1] }}</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="button-group">
-                    <template v-for="(button, index2) in project.buttons" :key="index2">
-                        <a :href="button.url" :target="button.target">{{ button.text }}</a>
-                    </template>
-                </div>
-            </section>
+                    <div class="button-group">
+                        <template v-for="(button, index2) in project.buttons" :key="index2">
+                            <a :href="button.url" :target="button.target">{{ button.text }}</a>
+                        </template>
+                    </div>
+                </section>
+            </div>
         </div>
 
         <Footer />
@@ -48,7 +50,15 @@ export default {
     color: #fff;
 }
 
-#container section {
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0 10%;
+    white-space: pre-line;
+}
+
+#grid section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,14 +68,26 @@ export default {
     margin: 75px 10%;
 }
 
-#container section h1 {
+#gris section h1 {
     width: 100%;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-#container section p {
+#grid section p {
     font-size: 1.3rem;
+}
+
+@media (max-width: 1025px) {
+    #grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 769px) {
+    #grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tech-group,
@@ -80,7 +102,6 @@ export default {
 }
 
 .button-group a {
-    height: 100%;
     margin: 7px;
     padding: 10px;
     text-align: center;
