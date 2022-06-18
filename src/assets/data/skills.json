@@ -20,6 +20,11 @@
         "icon": "css"
     },
     {
+        "name": "C++",
+        "type": "language",
+        "icon": "cpp"
+    },
+    {
         "name": "Visual Basic",
         "type": "language",
         "icon": "visual-basic"
