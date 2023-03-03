@@ -1,14 +1,9 @@
-# node
-node_modules/
+# Node
+node_modules
 
-# yarn
-.yarn/*
-!.yarn/releases/
-!.yarn/plugins/
+# Build
+.next/
 
-# nuxt
-.nuxt
-.output
-
-# secrets
+# Secrets
 .env
+_*/
