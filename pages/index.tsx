@@ -37,7 +37,7 @@ export default function Home() {
             </h2>
 
             <div className="flex gap-5 text-2xl lg:text-3xl [&>*]:!text-red-200">
-                <InlineLink to="mailto:kiaora" icon={SiGmail} />
+                <InlineLink to="mailto:kiaora@apteryx.xyz" icon={SiGmail} />
                 <InlineLink to="/github" icon={SiGithub} />
                 <InlineLink to="/discord" icon={SiDiscord} />
             </div>
