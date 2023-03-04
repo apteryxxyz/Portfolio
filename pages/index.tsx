@@ -1,4 +1,4 @@
-import { SiDiscord, SiGithub, SiGmail } from 'react-icons/si';
+import { SiDiscord, SiGithub } from 'react-icons/si';
 import { GradientText } from '#/components/Effects/GradientText';
 import { ArrowKey } from '#/components/Icon/ArrowKey';
 import { InlineLink } from '#/components/Input/InlineLink';
@@ -36,12 +36,7 @@ export default function Home() {
                 Software Developer
             </h2>
 
-            <div className="flex gap-5 text-2xl lg:text-3xl [&>*]:!text-red-200">
-                <InlineLink
-                    to="mailto:kiaora@apteryx.xyz"
-                    icon={SiGmail}
-                    target="_blank"
-                />
+            <div className="flex gap-3 text-2xl lg:text-3xl [&>*]:!text-red-200">
                 <InlineLink to="/github" icon={SiGithub} target="_blank" />
                 <InlineLink to="/discord" icon={SiDiscord} target="_blank" />
             </div>
