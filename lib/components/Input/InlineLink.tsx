@@ -9,7 +9,9 @@ export function InlineLink(props: InlineLink.Props) {
             text-red-500 hover:text-red-400
             ${isOnlyIcon ? 'hover:scale-110' : ''}`.replaceAll(/\s+/g, ' ')}
         href={props.to}
-        target={props.to.startsWith('http') ? '_blank' : undefined}
+        target={
+            props.target ?? props.to.startsWith('http') ? '_blank' : undefined
+        }
     >
         {props.icon && <props.icon className="inline-block mr-2" />}
 
@@ -22,5 +24,6 @@ export namespace InlineLink {
         to: string;
         children?: string | React.ReactNode;
         icon?: IconType;
+        target?: string;
     }
 }

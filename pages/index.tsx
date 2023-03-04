@@ -37,9 +37,13 @@ export default function Home() {
             </h2>
 
             <div className="flex gap-5 text-2xl lg:text-3xl [&>*]:!text-red-200">
-                <InlineLink to="mailto:kiaora@apteryx.xyz" icon={SiGmail} />
-                <InlineLink to="/github" icon={SiGithub} />
-                <InlineLink to="/discord" icon={SiDiscord} />
+                <InlineLink
+                    to="mailto:kiaora@apteryx.xyz"
+                    icon={SiGmail}
+                    target="_blank"
+                />
+                <InlineLink to="/github" icon={SiGithub} target="_blank" />
+                <InlineLink to="/discord" icon={SiDiscord} target="_blank" />
             </div>
         </Section>
 
