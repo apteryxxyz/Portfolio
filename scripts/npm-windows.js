@@ -4,6 +4,6 @@ const { promisify } = require("node:util");
 
 void main(process.argv.length, process.argv);
 async function main(_, [_0, _1, ...args]) {
-    const command = `yarn ${args.join(" ")}`;
+    const command = `npm ${args.join(" ")}`;
     await promisify(exec)(command, { windowsHide: true, stdio: "inherit" });
 }

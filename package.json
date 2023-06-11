@@ -8,6 +8,7 @@
         "format": "prettier --write src/**/*.{ts,tsx} && eslint --fix --ext .ts,.tsx src/",
         "dev": "next dev",
         "build": "next build",
+        "__start": "next start -p 4000",
         "start": "pm2 startOrReload pm2.config.js",
         "stop": "pm2 stop pm2.config.js"
     },
