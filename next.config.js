@@ -1,27 +1,11 @@
 /** @type {import('next').NextConfig} */
-let nextConfig = {
-    distDir: '.next',
-    reactStrictMode: false,
-    poweredByHeader: false,
-    swcMinify: true,
-    async redirects() {
-        return [
-            {
-                source: '/discord',
-                destination: 'https://discord.gg/vZQbMhwsKY',
-                permanent: false,
-            },
-            {
-                source: '/github',
-                destination: 'https://github.com/apteryxxyz',
-                permanent: false,
-            },
-        ]
-    }
+const nextConfig = {
+    images: {
+        remotePatterns: [{ protocol: "https", hostname: "**" }],
+    },
+    experimental: {
+        serverActions: true,
+        typedRoutes: true,
+    },
 };
-
-if (process.env['ANALYSE'] === 'true') {
-    nextConfig = require('@next/bundle-analyzer')()(nextConfig);
-}
-
 module.exports = nextConfig;

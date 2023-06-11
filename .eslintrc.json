@@ -4,5 +4,7 @@
         "apteryx/next",
         "apteryx/typescript",
         "apteryx/prettier"
-    ]
+    ],
+    "ignorePatterns": ["*.config.js", "scripts"],
+    "parserOptions": { "project": "./tsconfig.json" }
 }
