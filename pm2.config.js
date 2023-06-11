@@ -5,7 +5,7 @@ module.exports = [{
     name: 'Portfolio',
     cwd: '.',
     script,
-    args: 'start',
+    args: 'run __start',
     instances: 1,
     autorestart: true,
     watch: false,
