@@ -1,33 +1,21 @@
-import '@/styles/tailwind.css';
-
-import type { Metadata } from 'next';
+import '@/styles/reset.css';
+import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
-import type { PropsWithChildren } from 'react';
+import type { LayoutProps } from '@/types';
+import { cn } from '@/utilities/class-name';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-    title: 'Apteryx | Software Developer',
-    description:
-        'Software developer making websites, games, apps, and bots. I specialise in TypeScript and C#, along with React.js, Next.js, Unity and many many more.',
-    icons: { icon: 'favicon-32x32.png' },
-    openGraph: {
-        type: 'website',
-        url: 'https://apteryx.xyz',
-        title: 'Apteryx | Software Developer',
-        description:
-            'Software developer making websites, games, apps, and bots. I specialise in TypeScript and C#, along with React.js, Next.js, Unity and many many more.',
-        siteName: 'Apteryx',
-    },
-    twitter: {
-        creator: '@apteryxxyz',
-    },
-};
+export default function Layout(p: LayoutProps) {
+  return (
+    <html lang="en" className={cn(inter.className)}>
+      <body key="body" className="flex flex-col bg-background text-foreground">
+        <div className="h-4 animate-rolling-gradient bg-gradient-to-r from-me-secondary to-me-primary bg-[length:400%_400%]" />
 
-export default function Layout({ children }: PropsWithChildren) {
-    return <html lang="en" className={inter.className}>
-        <body key="body" className="min-h-[100dvh] bg-green-950 text-white/90">
-            <main>{children}</main>
-        </body>
-    </html>;
+        <main className="container flex-1 gap-6 py-10">{p.children}</main>
+
+        <footer className="flex flex-shrink-0 flex-col items-center justify-center pb-8 text-foreground/30"></footer>
+      </body>
+    </html>
+  );
 }
