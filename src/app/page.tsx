@@ -54,7 +54,7 @@ export default function Page() {
             type={ProjectType.WebApp}
             name="Qwaroo"
             description="Higher or Lower on a whole new level, play one of the many games we have to offer, or create your own and share it with your friends!"
-            iconUrl="https://staging.qwaroo.com/icon.svg"
+            iconUrl="https://qwaroo.com/icon.svg"
             techologies={[
               'TypeScript',
               'React',
