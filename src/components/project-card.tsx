@@ -81,7 +81,7 @@ export function ProjectCard(p: ProjectCardProps) {
             <span>to</span>
             {p.discontinuedOn ? (
               <time dateTime={p.discontinuedOn.toISOString()}>
-                {p.discontinuedOn.toLocaleDateString()}
+                {p.discontinuedOn.toLocaleDateString('en-NZ')}
               </time>
             ) : (
               <strong className="text-foreground">Present</strong>

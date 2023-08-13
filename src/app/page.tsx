@@ -69,7 +69,7 @@ export default function Page() {
           <ProjectCard
             type={[ProjectType.DiscordBot, ProjectType.WebApp]}
             name="Evaluate"
-            description="Compile and run code, capture, identify, and save snippets with Evaluate - the ultimate programming bot for Discord!"
+            description="Compile and run code, use AI to explain errors and identify languages, and save snippets with Evaluate - the ultimate programming bot for Discord!"
             iconUrl="https://japi.rest/discord/v1/user/946755134443102258/avatar"
             techologies={['TypeScript', 'Next.js', 'Primsa']}
             createdOn={new Date(1683841896000)}

@@ -32,7 +32,7 @@ export function LibraryCard(p: LibraryCardProps) {
       <Card.Footer className="mt-auto flex-col items-start">
         <Card.Description className="space-x-1">
           <time dateTime={p.createdOn.toISOString()}>
-            {p.createdOn.toLocaleDateString()}
+            {p.createdOn.toLocaleDateString('en-NZ')}
           </time>
 
           {p.isMaintained && (
