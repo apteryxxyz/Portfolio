@@ -2,6 +2,7 @@ import { Code2Icon, Link2Icon } from 'lucide-react';
 import Image from 'next/image';
 import { Badge } from './ui/badge';
 import { Card } from './ui/card';
+import { formatDate } from '@/utilities/format-date';
 
 export enum ProjectType {
   WebApp = 'Web App',
@@ -81,7 +82,7 @@ export function ProjectCard(p: ProjectCardProps) {
             <span>to</span>
             {p.discontinuedOn ? (
               <time dateTime={p.discontinuedOn.toISOString()}>
-                {p.discontinuedOn.toLocaleDateString('en-NZ')}
+                {formatDate(p.discontinuedOn)}
               </time>
             ) : (
               <strong className="text-foreground">Present</strong>

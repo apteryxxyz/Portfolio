@@ -1,4 +1,5 @@
 import { Code2Icon } from 'lucide-react';
+import { formatDate } from '@/utilities/format-date';
 import { Card } from './ui/card';
 
 interface LibraryCardProps {
@@ -32,7 +33,7 @@ export function LibraryCard(p: LibraryCardProps) {
       <Card.Footer className="mt-auto flex-col items-start">
         <Card.Description className="space-x-1">
           <time dateTime={p.createdOn.toISOString()}>
-            {p.createdOn.toLocaleDateString('en-NZ')}
+            {formatDate(p.createdOn)}
           </time>
 
           {p.isMaintained && (
