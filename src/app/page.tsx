@@ -135,14 +135,14 @@ export default function Page() {
             description="Add support for WebSockets in Next.js 13 app directory."
             sourceUrl="https://github.com/apteryxxyz/next-ws"
             createdOn={new Date(1685906750690)}
-            isMaintained
           />
 
           <LibraryCard
             name="Next SA"
-            description="Improved Next.js 13 server actions, with type-safe validation and timeout."
+            description="Improved Next.js 13 server actions, with type-safe validation and timeouts."
             sourceUrl="https://github.com/apteryxxyz/next-sa"
             createdOn={new Date(1686301362013)}
+            isMaintained
           />
 
           <LibraryCard
