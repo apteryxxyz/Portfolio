@@ -71,7 +71,7 @@ export default function Page() {
             name="Evaluate"
             description="Compile and run code, use AI to explain errors and identify languages, and save snippets with Evaluate - the ultimate programming bot for Discord!"
             iconUrl="https://japi.rest/discord/v1/user/946755134443102258/avatar"
-            techologies={['TypeScript', 'Next.js', 'Primsa']}
+            techologies={['TypeScript', 'Next.js', 'Prisma']}
             createdOn={new Date(1683841896000)}
             deployedUrl="https://evaluate.apteryx.xyz/invite"
           />
