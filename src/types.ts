@@ -1,8 +1,10 @@
-export type ParamType<TParam extends string> = TParam extends `${infer TName}[]`
+import '@total-typescript/ts-reset';
+
+type ParamType<TParam extends string> = TParam extends `${infer TName}[]`
   ? { [key in TName]: string[] }
   : { [key in TParam]: string };
 
-export type Params<TParams extends string[]> = TParams extends [
+type Params<TParams extends string[]> = TParams extends [
   infer TParam extends string,
   ...infer TRest extends string[],
 ]
@@ -11,17 +13,28 @@ export type Params<TParams extends string[]> = TParams extends [
   ? ParamType<TParam>
   : {};
 
-export type PageProps<
-  TParams extends string[] | undefined = undefined,
-  TSearchParams extends string[] | undefined = undefined,
-> = {
+/**
+ * @example // /[id]/page.tsx
+ * function Page(p: PageProps<['id']>) {
+ * //            ^? { params: { id: string }; searchParams: {} }
+ * @example // /[...name]/page.tsx
+ * function Page(p: PageProps<['name[]']>) {
+ * //            ^? { params: { name: string[] }; searchParams: {} }
+ */
+export type PageProps<TParams extends string[] = never[]> = {
   params: TParams extends string[] ? Params<TParams> : {};
-  searchParams: TSearchParams extends string[]
-    ? { [key in TSearchParams[number]]?: string | string[] }
-    : {};
-} & {};
+  searchParams: Record<string, string | string[]>;
+};
 
-export type LayoutProps<TParams extends string[] | undefined = undefined> =
+/**
+ * @example // /[id]/layout.tsx
+ * function Layout(p: LayoutProps<['id']>) {
+ * //              ^? { params: { id: string }; children: ReactNode }
+ * @example // /[id]/[...name]/layout.tsx
+ * function Layout(p: LayoutProps<['id', 'name[]']>) {
+ * //              ^? { params: { id: string; name: string[] }; children: ReactNode }
+ */
+export type LayoutProps<TParams extends string[] = never[]> =
   React.PropsWithChildren<{
     params: TParams extends string[] ? Params<TParams> : {};
   }>;

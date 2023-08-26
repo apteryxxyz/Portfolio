@@ -1,11 +1,19 @@
-# Yarn v2
+# Node
+node_modules
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-node_modules/
+
+# Secrets
+.env.*
+!.env.template
+
+# Vercel
+.vercel/
 
 # Build
 .next/
+.contentlayer/

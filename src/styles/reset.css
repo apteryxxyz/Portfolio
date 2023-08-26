@@ -38,7 +38,6 @@ select,
 option {
   appearance: none;
   background-color: transparent;
-  /* border: none; */
   box-sizing: border-box;
   color: inherit;
   font-family: inherit;

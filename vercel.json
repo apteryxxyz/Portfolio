@@ -1,4 +1,6 @@
 {
-  "buildCommand": "yarn build",
-  "devCommand": "yarn dev"
+    "buildCommand": "yarn build",
+    "devCommand": "yarn dev",
+    "redirects": [],
+    "rewrites": []
 }

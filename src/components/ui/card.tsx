@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { cn } from '@/utilities/class-name';
 
-const CardRoot = React.forwardRef<
+const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      'rounded-xl border border-border/80 bg-card text-card-foreground shadow',
+      'rounded-xl border bg-card text-card-foreground shadow',
       className,
     )}
     {...props}
   />
 ));
-CardRoot.displayName = 'Card';
+Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -34,10 +34,7 @@ const CardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn(
-      'text-xl font-semibold leading-none tracking-tight',
-      className,
-    )}
+    className={cn('font-semibold leading-none tracking-tight', className)}
     {...props}
   />
 ));
@@ -76,18 +73,10 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = 'CardFooter';
 
 export {
-  CardRoot,
+  Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardDescription,
   CardContent,
 };
-
-export const Card = Object.assign(CardRoot, {
-  Header: CardHeader,
-  Footer: CardFooter,
-  Title: CardTitle,
-  Description: CardDescription,
-  Content: CardContent,
-});
