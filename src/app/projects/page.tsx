@@ -3,7 +3,7 @@ import Balancer from 'react-wrap-balancer';
 import { ProjectSection } from '@/components/project-section';
 
 export const metadata: Metadata = {
-  title: "Apteryx's Blog",
+  title: 'Projects by Apteryx',
   description: "A full-stack web and mobile app developer's project gallery.",
 };
 
@@ -18,9 +18,18 @@ export default function Page() {
         <p className="text-center font-semibold text-muted-foreground md:text-lg">
           <Balancer>
             There are some of my favourite active projects. I have many more on
-            my GitHub, so feel free to check that out too! I'm always looking
-            for new opportunities to learn and grow, so feel free to reach out
-            if you have any ideas!
+            my{' '}
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://github.com/apteryxxyz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            , so feel free to check that out too! I'm always looking for new
+            opportunities to learn and grow, so feel free to reach out if you
+            have any ideas!
           </Balancer>
         </p>
       </div>

@@ -76,33 +76,6 @@ export default function Page(p: PageProps<['slug']>) {
 
         <Mdx>{post.body.code}</Mdx>
       </article>
-
-      {/* <div className="mx-auto flex flex-col items-center gap-4">
-        <Button className="mr-auto" asChild>
-          <Link href="/blog">See all posts</Link>
-        </Button>
-
-        <div className="flex flex-col gap-4">
-          {allPosts.map((post) => (
-            <Card key={post._id} className="relative text-left">
-              <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-
-                <CardDescription>
-                  {post.description}
-                  <time dateTime={post.publishedAt} className="mt-1 block">
-                    {formatDate(new Date(post.publishedAt), 'full')}
-                  </time>
-                </CardDescription>
-              </CardHeader>
-
-              <Link href={`/blog/${post.slug}`} className="absolute inset-0">
-                <span className="sr-only">View Article</span>
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 }

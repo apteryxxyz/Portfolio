@@ -56,7 +56,7 @@ export function ProjectSection(p: ProjectSectionProps) {
         <div className="flex h-full flex-col justify-center gap-4 p-10 text-white md:min-h-[25rem] md:w-[45%] lg:p-20">
           <h1 className="text-3xl font-extrabold md:text-4xl">{p.title}.</h1>
 
-          <div className="flex gap-2 text-sm">
+          <div className="flex flex-wrap gap-2 text-sm">
             {p.tags.map((t) => (
               <span
                 key={t}
@@ -71,7 +71,7 @@ export function ProjectSection(p: ProjectSectionProps) {
             <Balancer>{p.description}</Balancer>
           </p>
 
-          <div>
+          <div className="flex gap-2">
             {p.externalLink && (
               <Button className="w-full" asChild>
                 <a
@@ -79,7 +79,7 @@ export function ProjectSection(p: ProjectSectionProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Project -&gt;
+                  Visit Project -&gt;
                 </a>
               </Button>
             )}

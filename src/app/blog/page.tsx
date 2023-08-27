@@ -13,7 +13,7 @@ import {
 import { formatDate } from '@/utilities/format-values';
 
 export const metadata: Metadata = {
-  title: "Apteryx's Blog",
+  title: 'Blog Posts by Apteryx',
   description:
     'A full-stack web and mobile app developer that writes about my experiences, projects, guides, tutorials, and things that I find interesting.',
 };

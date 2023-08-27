@@ -2,7 +2,7 @@
 
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { Code, Pre } from './code';
-import { Components, nativeComponents } from './components';
+import { Components, nativeComponents } from './native';
 import { MdxTabs, MdxTabsOption } from './tabs';
 
 const components: Components = {
