@@ -56,11 +56,11 @@ export function ProjectSection(p: ProjectSectionProps) {
         <div className="flex h-full flex-col justify-center gap-4 p-10 text-white md:min-h-[25rem] md:w-[45%] lg:p-20">
           <h1 className="text-3xl font-extrabold md:text-4xl">{p.title}.</h1>
 
-          <div className="flex flex-wrap gap-2 text-sm">
+          <div className="flex flex-wrap gap-1 text-sm">
             {p.tags.map((t) => (
               <span
                 key={t}
-                className="rounded-md border border-white px-2 py-1"
+                className="rounded-md border border-white px-1.5 py-0.5"
               >
                 {t}
               </span>
