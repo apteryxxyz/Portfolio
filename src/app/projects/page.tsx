@@ -17,7 +17,7 @@ export default function Page() {
 
         <p className="text-center font-semibold text-muted-foreground md:text-lg">
           <Balancer>
-            There are some of my favourite active projects. I have many more on
+            These are some of my favourite active projects. I have many more on
             my{' '}
             <a
               className="text-blue-500 hover:underline"
