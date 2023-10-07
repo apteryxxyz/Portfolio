@@ -38,11 +38,28 @@ export default function Page() {
         <ProjectSection
           title="Evaluate"
           description="Quickly evaluate code snippets in any programming language, with optional input and command-line arguments or identify unknown programming languages effortlessly using AI."
-          tags={['TypeScript', 'React', 'Next.js', 'OpenAI']}
+          developerNote="Built with Next.js and Tailwind CSS, uses OpenAI for language identification."
+          builtWith={[
+            'TypeScript',
+            'React',
+            'Next.js',
+            'Tailwind CSS',
+            'OpenAI',
+          ]}
           phoneImageUrl="/projects/evaluate-phone.png"
           desktopImageUrl="/projects/evaluate-desktop.png"
           externalLink="https://evaluate.apteryx.xyz"
           themeHex="#2FC086"
+        />
+
+        <ProjectSection
+          title="Builders"
+          description="Build your features faster with Builders. Use this collection of type-safe JavaScript builders for your applications."
+          developerNote="Custom built auto-generated documentation using API Extractor, along with Next.js and Tailwind CSS for the website."
+          builtWith={['TypeScript', 'React', 'Next.js', 'Tailwind CSS']}
+          phoneImageUrl="/projects/builders-phone.png"
+          externalLink="https://builders.js.org"
+          themeHex="#0C0A09"
         />
       </div>
     </>

@@ -20,12 +20,12 @@ export function HeaderBar(p: HeaderBarProps) {
         Projects
       </Link>
 
-      <Link
+      {/* <Link
         href="/blog"
         className="font-semibold text-muted-foreground transition-colors duration-200 hover:text-foreground"
       >
         Blog
-      </Link>
+      </Link> */}
 
       <ThemeSwitcher />
     </header>

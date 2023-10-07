@@ -20,8 +20,9 @@ import { Button } from './ui/button';
 
 type ProjectSectionProps = {
   title: string;
-  tags: string[];
+  builtWith: string[];
   description: string;
+  developerNote?: string;
   themeHex: `#${string}`;
   externalLink?: string;
 } & (
@@ -57,7 +58,7 @@ export function ProjectSection(p: ProjectSectionProps) {
           <h1 className="text-3xl font-extrabold md:text-4xl">{p.title}.</h1>
 
           <div className="flex flex-wrap gap-1 text-sm">
-            {p.tags.map((t) => (
+            {p.builtWith.map((t) => (
               <span
                 key={t}
                 className="rounded-md border border-white px-1.5 py-0.5"
@@ -84,6 +85,12 @@ export function ProjectSection(p: ProjectSectionProps) {
               </Button>
             )}
           </div>
+
+          {p.developerNote && (
+            <p className="text-sm">
+              <Balancer>{p.developerNote}</Balancer>
+            </p>
+          )}
         </div>
       </div>
 
