@@ -1,6 +1,12 @@
 {
-    "buildCommand": "yarn build",
-    "devCommand": "yarn dev",
-    "redirects": [],
-    "rewrites": []
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/vZQbMhwsKY",
+      "permanent": false
+    }
+  ],
+  "rewrites": []
 }
