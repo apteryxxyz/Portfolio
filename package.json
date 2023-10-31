@@ -2,9 +2,8 @@
   "name": "portfolio",
   "private": true,
   "scripts": {
-    "deploy": "echo \"Nothing to deploy\"",
     "build:contentlayer": "",
-    "build": "next build --no-lint && pnpm deploy",
+    "build": "next build --no-lint",
     "ui:add": "npx shadcn-ui@latest add -y",
     "dev:tunnel": "npx localtunnel --port 3000",
     "dev": "next dev & pnpm dev:tunnel",
