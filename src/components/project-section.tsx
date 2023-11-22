@@ -1,30 +1,18 @@
-import chroma from 'chroma-js';
-import { useMemo } from 'react';
+/* eslint-disable @next/next/no-img-element */
+
+import { colord } from 'colord';
 import Balancer from 'react-wrap-balancer';
 import { Button } from './ui/button';
 
-// LIGHT YELLOW
-// rgba(255, 246, 122, 0.4)
-// rgba(99, 104, 26, 0.4)
-// DARK YELLOW
-
-// LIGHT GREEN
-// rgb(33, 255, 145)
-// rgb(25, 217, 109)
-// DARK GREEN
-
-// LIGHT BLUE
-// rgb(43, 31, 230)
-// rgb(25, 18, 133)
-// DARK BLUE
-
 type ProjectSectionProps = {
-  title: string;
-  builtWith: string[];
+  name: string;
   description: string;
-  developerNote?: string;
+  url?: string;
+
+  developmentNotes?: string;
+  builtWith: string[];
+  sourceUrl?: string;
   themeHex: `#${string}`;
-  externalLink?: string;
 } & (
   | {
       phoneImageUrl: string | [string, string];
@@ -36,26 +24,20 @@ type ProjectSectionProps = {
     }
 );
 
-function generateGradient(hex: `#${string}`) {
-  return {
-    same: hex,
-    dark: chroma(hex).darken().hex(),
-    light: chroma(hex).brighten().hex(),
-  };
-}
-
 export function ProjectSection(p: ProjectSectionProps) {
-  const colours = useMemo(() => generateGradient(p.themeHex), [p.themeHex]);
-  const gradient = `linear-gradient(15deg, ${colours.dark} 0%, ${colours.light} 100%)`;
+  const startColour = colord(p.themeHex).darken(0.2).toHex();
+  const endColour = colord(p.themeHex).lighten(0.3).toHex();
+  const backgroundGradient = `linear-gradient(15deg, ${startColour} 0%, ${endColour} 100%)`;
+  const textColour = colord(p.themeHex).brightness() > 0.7 ? 'black' : 'white';
 
   return (
     <section className="relative flex w-full items-center">
       <div
         className="w-full rounded-xl md:min-h-[25rem]"
-        style={{ background: gradient }}
+        style={{ background: backgroundGradient, color: textColour }}
       >
         <div className="flex h-full flex-col justify-center gap-4 p-10 text-white md:min-h-[25rem] md:w-[45%] lg:p-20">
-          <h1 className="text-3xl font-extrabold md:text-4xl">{p.title}.</h1>
+          <h1 className="text-3xl font-extrabold md:text-4xl">{p.name}.</h1>
 
           <div className="flex flex-wrap gap-1 text-sm">
             {p.builtWith.map((t) => (
@@ -72,23 +54,27 @@ export function ProjectSection(p: ProjectSectionProps) {
             <Balancer>{p.description}</Balancer>
           </p>
 
-          <div className="flex gap-2">
-            {p.externalLink && (
-              <Button className="w-full" asChild>
-                <a
-                  href={p.externalLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Project -&gt;
+          <div className="flex flex-col flex-wrap gap-2 md:flex-row">
+            {p.url && (
+              <Button variant="always-dark" className="w-full" asChild>
+                <a href={p.url} target="_blank" rel="noopener noreferrer">
+                  Visit Project →
+                </a>
+              </Button>
+            )}
+
+            {p.sourceUrl && (
+              <Button variant="always-dark" className="w-full" asChild>
+                <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  Source Code →
                 </a>
               </Button>
             )}
           </div>
 
-          {p.developerNote && (
+          {p.developmentNotes && (
             <p className="text-sm">
-              <Balancer>{p.developerNote}</Balancer>
+              <Balancer>{p.developmentNotes}</Balancer>
             </p>
           )}
         </div>

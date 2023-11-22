@@ -8,7 +8,7 @@ service.enabled(false);
 const nextConfig = {
   reactStrictMode: true,
   images: { domains: [] },
-  experimental: { typedRoutes: true, serverActions: true },
+  experimental: { typedRoutes: true },
   redirects: async () => require('./vercel.json').redirects ?? [],
   rewrites: async () => require('./vercel.json').rewrites ?? [],
   typescript: {

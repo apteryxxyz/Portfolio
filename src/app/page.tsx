@@ -4,6 +4,8 @@ export default function Page() {
   return (
     <section className="mx-auto my-44 w-[66%] space-y-4 text-center">
       <h1 className="text-center text-4xl font-bold md:text-6xl">
+        {/* <Balancer>Empowering Ideas Through Code.</Balancer> */}
+
         <Balancer>Empowering Ideas Through Code.</Balancer>
       </h1>
 
