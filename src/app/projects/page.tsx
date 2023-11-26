@@ -28,7 +28,7 @@ export default function Page() {
         <ProjectSection
           name="Evaluate"
           description="Quickly evaluate code snippets in any programming language, with optional input and command-line arguments or identify unknown programming languages effortlessly using AI."
-          url="https://evaluate.apteryx.xyz"
+          links={{ Website: 'https://evaluate.apteryx.xyz' }}
           developmentNotes="Built with Next.js and Tailwind CSS, uses OpenAI for language identification."
           builtWith={['TypeScript', 'Next.js', 'Tailwind CSS', 'OpenAI']}
           themeHex="#2FC086"
@@ -39,10 +39,22 @@ export default function Page() {
         <ProjectSection
           name="DarkViperAU Soundboard"
           description="A soundboard app featuring many of the great phrases the content creator DarkViperAU has said, from questions to insults and even some strange noises."
-          url="https://play.google.com/store/apps/details?id=com.blackbox.darkviperau"
+          links={{
+            'Google Play':
+              'https://play.google.com/store/apps/details?id=com.blackbox.darkviperau',
+          }}
           builtWith={['TypeScript', 'React Native', 'Expo']}
           themeHex="#242448"
           phoneImageUrl="/projects/darkviperau-phone.png"
+        />
+
+        <ProjectSection
+          name="JackSucksAtLife Soundboard"
+          description="A soundboard app featuring many of the great phrases the content creator JackSucksAtLife has said, from questions to insults and even some strange noises."
+          links={{ 'Coming Soon': null }}
+          builtWith={['TypeScript', 'React Native', 'Expo']}
+          themeHex="#39add8"
+          phoneImageUrl="/projects/jacksucksatlife-phone.png"
         />
       </div>
     </>

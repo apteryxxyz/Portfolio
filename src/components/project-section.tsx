@@ -7,11 +7,10 @@ import { Button } from './ui/button';
 type ProjectSectionProps = {
   name: string;
   description: string;
-  url?: string;
+  links?: Record<string, string | null>;
 
   developmentNotes?: string;
   builtWith: string[];
-  sourceUrl?: string;
   themeHex: `#${string}`;
 } & (
   | {
@@ -50,27 +49,28 @@ export function ProjectSection(p: ProjectSectionProps) {
             ))}
           </div>
 
-          <p className="text-sm">
-            <Balancer>{p.description}</Balancer>
-          </p>
+          <p className="text-sm">{p.description}</p>
 
-          <div className="flex flex-col flex-wrap gap-2 md:flex-row">
-            {p.url && (
-              <Button variant="always-dark" className="w-full" asChild>
-                <a href={p.url} target="_blank" rel="noopener noreferrer">
-                  Visit Project →
-                </a>
-              </Button>
-            )}
-
-            {p.sourceUrl && (
-              <Button variant="always-dark" className="w-full" asChild>
-                <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
-                  Source Code →
-                </a>
-              </Button>
-            )}
-          </div>
+          {p.links && (
+            <div className="flex flex-col gap-2 md:flex-row">
+              {Object.entries(p.links).map(([name, url]) => (
+                <Button
+                  variant="always-dark"
+                  className="w-full"
+                  disabled={url === null}
+                  asChild
+                >
+                  <a
+                    href={url ?? '#'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {name} →
+                  </a>
+                </Button>
+              ))}
+            </div>
+          )}
 
           {p.developmentNotes && (
             <p className="text-sm">

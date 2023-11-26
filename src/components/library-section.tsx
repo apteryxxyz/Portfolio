@@ -5,10 +5,9 @@ import { Button } from './ui/button';
 type LibrarySectionProps = {
   name: string;
   description: string;
+  links?: Record<string, string>;
 
   developmentNotes?: string;
-  sourceUrl?: string;
-  documentationUrl?: string;
   themeHex: `#${string}`;
 };
 
@@ -27,27 +26,17 @@ export function LibrarySection(p: LibrarySectionProps) {
 
       <p className="text-sm">{p.description}</p>
 
-      <div className="flex flex-col gap-2 md:flex-row">
-        {p.sourceUrl && (
-          <Button variant="always-dark" className="w-full" asChild>
-            <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">
-              Source Code →
-            </a>
-          </Button>
-        )}
-
-        {p.documentationUrl && (
-          <Button variant="always-dark" className="w-full" asChild>
-            <a
-              href={p.documentationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Documentation →
-            </a>
-          </Button>
-        )}
-      </div>
+      {p.links && (
+        <div className="flex flex-col gap-2 md:flex-row">
+          {Object.entries(p.links).map(([name, url]) => (
+            <Button variant="always-dark" className="w-full" asChild>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {name} →
+              </a>
+            </Button>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

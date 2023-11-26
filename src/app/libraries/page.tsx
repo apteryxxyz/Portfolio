@@ -37,29 +37,31 @@ export default function Page() {
           name="Builders"
           description="Build your features faster with Builders. Use this collection of type-safe JavaScript builders for your applications."
           developmentNotes="Custom built auto-generated documentation using API Extractor, along with Next.js and Tailwind CSS for the website."
-          sourceUrl="https://github.com/apteryxxyz/builders"
-          documentationUrl="https://builders.js.org"
+          links={{
+            GitHub: 'https://github.com/apteryxxyz/builders',
+            Documentation: 'https://builders.js.org',
+          }}
           themeHex="#2B2B2B"
         />
 
         <LibrarySection
           name="Next WS"
           description="Next.js plugin designed to seamlessly integrate WebSocket server functionality into API routes within the app directory."
-          sourceUrl="https://github.com/apteryxxyz/next-ws"
+          links={{ GitHub: 'https://github.com/apteryxxyz/next-ws' }}
           themeHex="#2B2B2B"
         />
 
         <LibrarySection
           name="Enhanced MS"
           description="Convert human readable time-frame strings to milliseconds and vice versa, with support for i10n and operators!"
-          sourceUrl="https://github.com/apteryxxyz/enhanced-ms"
+          links={{ GitHub: 'https://github.com/apteryxxyz/enhanced-ms' }}
           themeHex="#00B7FF"
         />
 
         <LibrarySection
           name="JSWhat"
           description="Identify anything. Easily identify emails, IP addresses, and more. Works in Node, the browser and the command line."
-          sourceUrl="https://github.com/apteryxxyz/jswhat"
+          links={{ GitHub: 'https://github.com/apteryxxyz/jswhat' }}
           themeHex="#FFFF00"
         />
       </div>
