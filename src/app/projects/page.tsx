@@ -51,7 +51,10 @@ export default function Page() {
         <ProjectSection
           name="JackSucksAtLife Soundboard"
           description="A soundboard app featuring many of the great phrases the content creator JackSucksAtLife has said, from questions to insults and even some strange noises."
-          links={{ 'Coming Soon': null }}
+          links={{
+            'Google Play':
+              'https://play.google.com/store/apps/details?id=xyz.apteryx.jacksucksatlife',
+          }}
           builtWith={['TypeScript', 'React Native', 'Expo']}
           themeHex="#39add8"
           phoneImageUrl="/projects/jacksucksatlife-phone.png"
