@@ -9,8 +9,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { formatDate } from '@/utilities/format-values';
+} from '~/components/ui/card';
+import { formatDate } from '~/utilities/format-values';
 
 export const metadata: Metadata = {
   title: 'Blog Posts by Apteryx',

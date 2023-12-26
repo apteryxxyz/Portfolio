@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo } from 'react';
-import { cn } from '@/utilities/class-name';
+import { useMemo } from 'react';
+import { cn } from '~/utilities/class-name';
 import {
   ContextMenu,
   ContextMenuContent,
@@ -25,11 +25,12 @@ export function Code({
   );
 }
 
-function getContent(value: {}): string {
+// biome-ignore lint/suspicious/noExplicitAny: Can be any type
+function getContent(value: any): string {
   if (typeof value === 'string') return value;
-  if (Array.isArray(value)) return (value as {}[]).map(getContent).join('');
-  if (value && 'props' in value && 'data-line' in (value['props'] as {}))
-    return Reflect.get(value['props'] as {}, 'data-line');
+  if (Array.isArray(value)) return value.map(getContent).join('');
+  if (value && 'props' in value && 'data-line' in value.props)
+    return Reflect.get(value.props, 'data-line');
   return value?.toString();
 }
 
@@ -41,6 +42,7 @@ export function Pre({
   HTMLPreElement
 >) {
   const content = useMemo(() => {
+    // biome-ignore lint/suspicious/noExplicitAny: Can be any type
     const children = (p.children as any).props.children;
     if (typeof children === 'string') return children;
     return getContent(children);

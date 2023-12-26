@@ -3,7 +3,7 @@
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import { CheckIcon, ChevronRightIcon, DotIcon } from 'lucide-react';
 import * as React from 'react';
-import { cn } from '@/utilities/class-name';
+import { cn } from '~/utilities/class-name';
 
 const ContextMenu = ContextMenuPrimitive.Root;
 

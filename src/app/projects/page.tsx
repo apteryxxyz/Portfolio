@@ -1,6 +1,6 @@
 import type { Metadata } from 'next/types';
 import Balancer from 'react-wrap-balancer';
-import { ProjectSection } from '@/components/project-section';
+import { ProjectSection } from '~/components/project-section';
 
 export const metadata: Metadata = {
   title: 'Projects by Apteryx',
@@ -27,10 +27,10 @@ export default function Page() {
       <div className="flex flex-col gap-8 md:gap-56">
         <ProjectSection
           name="Evaluate"
-          description="Quickly evaluate code snippets in any programming language, with optional input and command-line arguments or identify unknown programming languages effortlessly using AI."
-          links={{ Website: 'https://evaluate.apteryx.xyz' }}
-          developmentNotes="Built with Next.js and Tailwind CSS, uses OpenAI for language identification."
-          builtWith={['TypeScript', 'Next.js', 'Tailwind CSS', 'OpenAI']}
+          description="Explore a diverse range of programming languages and tools with our comprehensive online platform. Evaluate is the ultimate code evaluation tool, quickly evaluate code snippets in any programming language, with optional input and command-line arguments."
+          links={{ Website: 'https://evaluate.run' }}
+          developmentNotes="Built with Next.js and Tailwind CSS."
+          builtWith={['TypeScript', 'Next.js', 'Tailwind CSS']}
           themeHex="#2FC086"
           phoneImageUrl="/projects/evaluate-phone.png"
           desktopImageUrl="/projects/evaluate-desktop.png"

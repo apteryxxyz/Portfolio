@@ -9,6 +9,18 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "//**/node_modules": true
-  }
+    "**/node_modules": true
+  },
+  "workbench.colorCustomizations": {
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
+  "cSpell.language": "en-GB",
+  "cSpell.words": [
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className"
+  ]
 }

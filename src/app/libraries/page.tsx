@@ -1,6 +1,6 @@
 import type { Metadata } from 'next/types';
 import Balancer from 'react-wrap-balancer';
-import { LibrarySection } from '@/components/library-section';
+import { LibrarySection } from '~/components/library-section';
 
 export const metadata: Metadata = {
   title: 'Libraries by Apteryx',

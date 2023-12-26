@@ -1,5 +1,5 @@
 import type { useMDXComponent } from 'next-contentlayer/hooks';
-import { cn } from '@/utilities/class-name';
+import { cn } from '~/utilities/class-name';
 
 export type Components = Exclude<
   (ReturnType<typeof useMDXComponent> extends React.FunctionComponent<infer P>
@@ -128,6 +128,7 @@ export const nativeComponents: Components = {
   ),
 
   img: ({ className, ...p }) => (
+    // biome-ignore lint/a11y/useAltText: Passed via p
     <img className={cn('rounded-md border', className)} {...p} />
   ),
 };

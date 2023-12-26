@@ -55,6 +55,7 @@ export function ProjectSection(p: ProjectSectionProps) {
             <div className="flex flex-col gap-2 md:flex-row">
               {Object.entries(p.links).map(([name, url]) => (
                 <Button
+                  key={name}
                   variant="always-dark"
                   className="w-full"
                   disabled={url === null}
@@ -86,6 +87,7 @@ export function ProjectSection(p: ProjectSectionProps) {
           {typeof p.phoneImageUrl === 'string' && !p.desktopImageUrl && (
             <img
               src={p.phoneImageUrl}
+              alt={`Phone screenshot of ${p.name}`}
               className="absolute right-[1rem] top-1/2 h-[35rem] -translate-y-1/2 transform lg:right-[5rem] xl:right-[10rem]"
             />
           )}
@@ -95,10 +97,12 @@ export function ProjectSection(p: ProjectSectionProps) {
             <>
               <img
                 src={p.phoneImageUrl[0]}
+                alt={`Phone screenshot of ${p.name}`}
                 className="absolute right-[0rem] top-1/2 h-[30rem] -translate-y-1/2 transform lg:right-[5rem] xl:right-[8rem]"
               />
               <img
                 src={p.phoneImageUrl[1]}
+                alt={`Phone screenshot of ${p.name}`}
                 className="absolute right-[10rem] top-1/2 h-[30rem] -translate-y-1/2 transform lg:right-[15rem] xl:right-[18rem]"
               />
             </>
@@ -108,6 +112,7 @@ export function ProjectSection(p: ProjectSectionProps) {
           {p.desktopImageUrl && !p.phoneImageUrl && (
             <img
               src={p.desktopImageUrl}
+              alt={`Desktop screenshot of ${p.name}`}
               className="absolute -right-[2rem] top-1/2 h-[20rem] -translate-y-1/2 transform lg:right-[2rem] lg:h-[30rem]"
             />
           )}
@@ -117,10 +122,12 @@ export function ProjectSection(p: ProjectSectionProps) {
             <>
               <img
                 src={p.desktopImageUrl}
+                alt={`Desktop screenshot of ${p.name}`}
                 className="absolute right-0 top-1/2 mt-6 h-[20rem] -translate-y-1/2 transform lg:right-[4rem] lg:h-[25rem]"
               />
               <img
                 src={p.phoneImageUrl}
+                alt={`Phone screenshot of ${p.name}`}
                 className="absolute -right-[2rem] top-1/2 h-[25rem] -translate-y-1/2 transform md:h-[30rem] lg:right-[2rem]"
               />
             </>

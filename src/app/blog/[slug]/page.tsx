@@ -2,10 +2,10 @@ import { allPosts } from 'contentlayer/generated';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next/types';
-import { Mdx } from '@/components/mdx';
-import { PageProps } from '@/types';
-import { formatDate } from '@/utilities/format-values';
-import { absoluteUrl } from '@/utilities/url-helpers';
+import { Mdx } from '~/components/mdx';
+import { PageProps } from '~/types';
+import { formatDate } from '~/utilities/format-values';
+import { absoluteUrl } from '~/utilities/url-helpers';
 
 function getPostFromParams(p: PageProps<['slug']>) {
   return allPosts.find((post) => post.slug === p.params.slug);

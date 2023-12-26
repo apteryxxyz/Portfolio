@@ -1,8 +1,8 @@
-import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { allPosts } from 'contentlayer/generated';
+import { readFile } from 'fs/promises';
 import { MetadataRoute } from 'next';
-import { absoluteUrl } from '@/utilities/url-helpers';
+import { absoluteUrl } from '~/utilities/url-helpers';
 
 async function loadStaticPaths() {
   // Loads the static paths from the Next.js routes manifest

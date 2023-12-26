@@ -8,7 +8,6 @@ service.enabled(false);
 const nextConfig = {
   reactStrictMode: true,
   images: { domains: [] },
-  experimental: { typedRoutes: true },
   redirects: async () => require('./vercel.json').redirects ?? [],
   rewrites: async () => require('./vercel.json').rewrites ?? [],
   typescript: {
@@ -23,8 +22,10 @@ const nextConfig = {
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 const { withContentlayer } = require('next-contentlayer');
 
-module.exports = withContentlayer(
-  withBundleAnalyzer({
-    enabled: process.env['ANALYZE'] === 'true',
-  })(nextConfig),
-);
+// module.exports = withContentlayer(
+//   withBundleAnalyzer({
+//     enabled: process.env['ANALYZE'] === 'true',
+//   })(nextConfig),
+// );
+
+module.exports = nextConfig;

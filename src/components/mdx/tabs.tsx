@@ -1,4 +1,4 @@
-import { usePreferred } from '@/contexts/preferred';
+import { usePreferred } from '~/contexts/preferred';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 
 interface MdxTabsProps {

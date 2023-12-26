@@ -1,6 +1,6 @@
 import { ServerThemeProvider } from 'next-themes';
-import { TooltipProvider } from '@/components/ui/tooltip';
-import { PreferredProvider } from '@/contexts/preferred';
+import { TooltipProvider } from '~/components/ui/tooltip';
+import { PreferredProvider } from '~/contexts/preferred';
 
 export function HTMLProviders(p: React.PropsWithChildren) {
   return (

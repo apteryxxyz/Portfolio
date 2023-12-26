@@ -1,4 +1,4 @@
-import { cn } from '@/utilities/class-name';
+import { cn } from '~/utilities/class-name';
 
 type HighlightTextProps = React.PropsWithChildren<{
   backgroundClassName?: `bg-${string}/20`;

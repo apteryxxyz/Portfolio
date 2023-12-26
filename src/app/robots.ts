@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { absoluteUrl } from '@/utilities/url-helpers';
+import { absoluteUrl } from '~/utilities/url-helpers';
 
 export default function Robots() {
   return {

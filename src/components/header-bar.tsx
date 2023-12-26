@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { cn } from '@/utilities/class-name';
+import { cn } from '~/utilities/class-name';
 import { ThemeSwitcher } from './theme-switcher';
 
 interface HeaderBarProps {

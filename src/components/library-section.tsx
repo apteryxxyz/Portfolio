@@ -29,7 +29,7 @@ export function LibrarySection(p: LibrarySectionProps) {
       {p.links && (
         <div className="flex flex-col gap-2 md:flex-row">
           {Object.entries(p.links).map(([name, url]) => (
-            <Button variant="always-dark" className="w-full" asChild>
+            <Button key={name} variant="always-dark" className="w-full" asChild>
               <a href={url} target="_blank" rel="noopener noreferrer">
                 {name} →
               </a>
