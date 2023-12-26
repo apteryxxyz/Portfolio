@@ -1,5 +1,4 @@
 import { join } from 'path';
-import { allPosts } from 'contentlayer/generated';
 import { readFile } from 'fs/promises';
 import { MetadataRoute } from 'next';
 import { absoluteUrl } from '~/utilities/url-helpers';
@@ -21,10 +20,12 @@ async function loadStaticPaths() {
 async function loadDynamicPaths() {
   // You can load dynamic paths from anywhere, such as a database
 
-  return allPosts.map((post) => ({
-    url: absoluteUrl(`/blog/${post.slug}`).toString(),
-    lastModified: new Date(post.publishedAt),
-  }));
+  // return allPosts.map((post) => ({
+  //   url: absoluteUrl(`/blog/${post.slug}`).toString(),
+  //   lastModified: new Date(post.publishedAt),
+  // }));
+
+  return [];
 }
 
 export default async function Sitemap() {
