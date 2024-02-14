@@ -11,16 +11,10 @@
     "**/Thumbs.db": true,
     "**/node_modules": true
   },
-  "workbench.colorCustomizations": {
-  },
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit"
   },
   "cSpell.language": "en-GB",
-  "cSpell.words": [
-  ],
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className"
-  ]
+  "cSpell.words": [],
+  "tailwindCSS.experimental.configFile": "./tailwind.config.cjs"
 }

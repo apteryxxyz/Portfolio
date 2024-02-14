@@ -1,15 +1,32 @@
-// Temporarily enable ts node so we can validate the env file
-const service = require('ts-node').register();
-const { loadEnvConfig } = require('@next/env');
-loadEnvConfig(process.cwd(), process.env.NODE_ENV !== 'production');
-service.enabled(false);
+import withBundleAnalyser from '@next/bundle-analyzer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: { domains: [] },
-  redirects: async () => require('./vercel.json').redirects ?? [],
-  rewrites: async () => require('./vercel.json').rewrites ?? [],
+
+  redirects: () => [
+    {
+      source: '/github',
+      destination: 'https://github.com/apteryxxyz',
+      permanent: false,
+    },
+    {
+      source: '/github/:path*',
+      destination: 'https://github.com/apteryxxyz/:path*',
+      permanent: false,
+    },
+    {
+      source: '/discord',
+      destination: 'https://discord.gg/vZQbMhwsKY',
+      permanent: false,
+    },
+    {
+      source: '/twitter',
+      destination: 'https://twitter.com/apteryxxyz',
+      permanent: false,
+    },
+  ],
+
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
@@ -19,13 +36,6 @@ const nextConfig = {
   },
 };
 
-const withBundleAnalyzer = require('@next/bundle-analyzer');
-const { withContentlayer } = require('next-contentlayer');
-
-// module.exports = withContentlayer(
-//   withBundleAnalyzer({
-//     enabled: process.env['ANALYZE'] === 'true',
-//   })(nextConfig),
-// );
-
-module.exports = nextConfig;
+export default withBundleAnalyser({
+  enabled: process.env.ANALYSE === 'true',
+})(nextConfig);

@@ -1,10 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "include": ["next-env.d.ts", "src/**/**/**/*", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
-  "mdx": { "plugins": ["remark-gfm"] },
+  "include": ["src/**/*", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage", "test", "tests"],
+  "compileOnSave": true,
   "compilerOptions": {
-    // Type Checking
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "exactOptionalPropertyTypes": false,
@@ -16,8 +15,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
-
-    // Modules
     "allowArbitraryExtensions": false,
     "allowImportingTsExtensions": false,
     "module": "ESNext",
@@ -25,43 +22,29 @@
     "resolveJsonModule": true,
     "resolvePackageJsonExports": true,
     "resolvePackageJsonImports": true,
-
-    // Emit
     "declaration": true,
-    // "composite": true,
     "declarationMap": true,
     "importHelpers": false,
     "newLine": "lf",
     "noEmitHelpers": true,
-    // "outDir": "dist",
+    "outDir": "dist",
     "removeComments": false,
     "sourceMap": true,
-
-    // Interop Constraints
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-
-    // Language and Environment
     "experimentalDecorators": true,
-    // "lib": ["ESNext"],
+    "lib": ["DOM", "ESNext"],
     "target": "ES2022",
     "useDefineForClassFields": true,
     "skipLibCheck": true,
-
-    // Project
     "baseUrl": ".",
-    "outDir": ".next",
-    "paths": {
-      "~/*": ["src/*"],
-      "contentlayer/generated": [".contentlayer/generated"]
-    },
-    "jsx": "preserve",
+    "paths": { "~/*": ["src/*"] },
     "allowJs": true,
     "noEmit": true,
     "incremental": true,
-    "plugins": [{ "name": "next" }],
-    "lib": ["dom", "es2023"]
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }]
   }
 }
