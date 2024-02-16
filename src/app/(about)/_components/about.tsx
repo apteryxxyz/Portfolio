@@ -11,19 +11,13 @@ export function AboutCard(p: React.ComponentPropsWithoutRef<typeof Card>) {
       <CardContent className="space-y-2">
         <p className="text-sm">
           I am a software developer with a passion for creating and building
-          things. Since 2020, I have been immersing myself in diverse projects,
+          things. Before my diploma, I started my journey as a self-taught
+          programmer in 2020, since immersing myself in diverse projects,
           ranging from web development and game design to both desktop and
-          mobile applications. My current focus is on web development, and I am
-          always looking for new opportunities to learn and grow as a developer.
+          mobile applications. My current focus is on web development using
+          technologies such as React and Next.js, but I am always looking for
+          new opportunities to learn and grow as a developer.
         </p>
-
-        {/* <p className="text-sm">
-          I am a strong advocate for open-source software and the free exchange
-          of knowledge. I believe that the best way to learn is by doing and
-          sharing what you have learned with others. I am always looking for
-          ways to contribute to the open-source community and to help others
-          learn and grow as developers.
-        </p> */}
       </CardContent>
     </Card>
   );

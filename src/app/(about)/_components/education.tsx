@@ -12,7 +12,7 @@ export function EducationCard(p: React.ComponentPropsWithoutRef<typeof Card>) {
         <EducationItem
           title="Diploma in Software Development"
           years="Jan 2022 to Dec 2023"
-          description="Study consisted of writing proposals, reports, and recording presentations. Learning consisted of web development, desktop app development using C++ and the Qt framework, and game development using Unity and Unreal Engine. Assessments were done through a combination of practical and theoretical exams, assignments, and projects."
+          description="Study covered various aspects of creating software applications for different platforms and purposes. Topics included web development, desktop app development, and game development. Assessments consisted of practical and theoretical exams, and assignments. I wrote proposals and reports for each project, explaining the objectives, methods, results, and conclusions. I also recorded presentations to demonstrate and showcase my work to the instructors and peers."
         />
       </CardContent>
     </Card>

@@ -52,7 +52,7 @@ export function ProjectSection(p: {
           />
         ) : (
           <div className="flex items-center justify-center h-full">
-            <p>Video not yet available</p>
+            <p>Preview not yet available</p>
           </div>
         )}
       </div>
