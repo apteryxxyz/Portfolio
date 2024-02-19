@@ -22,7 +22,10 @@ export default function ProjectsPage() {
         name="Qwaroo"
         description="A website that offers a variety of fun and challenging games based on comparing different aspects of the world, such as population, area, age, and more. Created using Next.js and wrote custom scripts to fetch game data from various sources, often by web scraping."
         technologies={['TypeScript', 'React', 'Next.js', 'TailwindCSS']}
-        links={{ 'Visit Website': 'https://qwaroo.vercel.app/' }}
+        links={{
+          'Visit Website': 'https://qwaroo.vercel.app/',
+          'Source Code': 'https://gihtub.com/apteryxxyz/qwaroo',
+        }}
         themeColour="#3399ff"
       />
 
