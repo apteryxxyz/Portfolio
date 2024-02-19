@@ -85,7 +85,9 @@ export function ProjectSection(p: {
               style={{ backgroundColor: p.themeColour, color: textColour }}
               asChild
             >
-              <a href={href}>{text} →</a>
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {text} →
+              </a>
             </Button>
           ))}
         </div>
