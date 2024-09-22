@@ -11,7 +11,6 @@ export function EducationCard(p: React.ComponentPropsWithoutRef<typeof Card>) {
       <CardContent>
         <EducationItem
           title="Diploma in Software Development"
-          years="Jan 2022 to Dec 2023"
           description="Study covered various aspects of creating software applications for different platforms and purposes. Topics included web development, desktop app development, and game development. Assessments consisted of practical and theoretical exams, and assignments. I wrote proposals and reports for each project, explaining the objectives, methods, results, and conclusions. I also recorded presentations to demonstrate and showcase my work to the instructors and peers."
         />
       </CardContent>
@@ -19,19 +18,15 @@ export function EducationCard(p: React.ComponentPropsWithoutRef<typeof Card>) {
   );
 }
 
-/*
-
-*/
-
 export function EducationItem(p: {
   title: string;
-  years: string;
+  years?: string;
   description?: string;
 }) {
   return (
     <div>
       <h3 className="text-lg inline">{p.title}</h3>
-      <span className="text-sm text-gray-400"> ({p.years})</span>
+      {p.years && <span className="text-sm text-gray-400"> ({p.years})</span>}
       {p.description && (
         <p className="text-sm text-gray-400">{p.description}</p>
       )}

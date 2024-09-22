@@ -19,6 +19,7 @@ export function ProjectSection(p: {
   links: Record<string, string>;
   themeColour: `#${string}`;
   videoId?: string;
+  imageId?: string;
 }) {
   const textColour =
     colord(p.themeColour).brightness() > 0.6 ? 'black' : 'white';
@@ -43,12 +44,18 @@ export function ProjectSection(p: {
         {p.videoId ? (
           <video
             className="object-cover rounded-xl"
-            poster={`/videos/${p.videoId}.png`}
-            src={`/videos/${p.videoId}.mp4`}
+            poster={`/projects/${p.videoId}.png`}
+            src={`/projects/${p.videoId}.mp4`}
             autoPlay
             playsInline
             muted
             loop
+          />
+        ) : p.imageId ? (
+          <img
+            className="object-cover rounded-xl"
+            src={`/projects/${p.imageId}.png`}
+            alt={p.name}
           />
         ) : (
           <div className="flex items-center justify-center h-full">
@@ -77,11 +84,11 @@ export function ProjectSection(p: {
           </CardHeader>
         </Card>
 
-        <div className="LinksSection lg:opacity-0 flex gap-5">
+        <div className="LinksSection lg:opacity-0 flex flex-wrap gap-2">
           {Object.entries(p.links).map(([text, href]) => (
             <Button
               key={href}
-              className="w-full h-full rounded-xl"
+              className="w-min h-min rounded-xl"
               style={{ backgroundColor: p.themeColour, color: textColour }}
               asChild
             >

@@ -19,6 +19,7 @@ import TypeScriptIcon from 'devicons-react/icons/TypescriptOriginal';
 import UnityIcon from 'devicons-react/icons/UnityOriginal';
 import UnrealEngineIcon from 'devicons-react/icons/UnrealengineOriginal';
 import VercelIcon from 'devicons-react/icons/VercelOriginal';
+import BunIcon from 'devicons-react/icons/BunPlain';
 
 import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card';
 import {
@@ -48,6 +49,7 @@ export function TechnologiesCard(
 
         {/* Runtimes */}
         <TechnologyItem name="Node.js" icon={NodeJsIcon} />
+        <TechnologyItem name="Bun" icon={BunIcon} />
 
         {/* Frontend Frameworks */}
         <TechnologyItem name="React" icon={ReactIcon} />
