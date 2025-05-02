@@ -29,7 +29,7 @@ export default function ProjectsPage() {
         technologies={['TypeScript', 'React', 'Next.js', 'TailwindCSS']}
         links={{
           'Visit Website': 'https://qwaroo.vercel.app/',
-          'Source Code': 'https://gihtub.com/apteryxxyz/qwaroo',
+          'Source Code': 'https://github.com/apteryxxyz/qwaroo',
         }}
         themeColour="#3399ff"
         imageId="qwaroo"
