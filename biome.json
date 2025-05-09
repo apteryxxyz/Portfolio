@@ -1,11 +1,10 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
-  "files": {
-    "ignore": [".next/", "node_modules/"]
-  },
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": { "ignore": ["node_modules/*", ".next/*"] },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
+    "indentWidth": 2,
     "lineEnding": "lf"
   },
   "linter": {
@@ -18,15 +17,41 @@
         "noParameterAssign": "off"
       },
       "suspicious": {
-        "noAssignInExpressions": "off"
+        "noAssignInExpressions": "off",
+        "noArrayIndexKey": "off"
+      },
+      "a11y": {
+        "useSemanticElements": "off",
+        "useFocusableInteractive": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["cn", "cva"]
+          }
+        }
       }
     }
   },
+  "organizeImports": {
+    "enabled": true
+  },
+
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
       "jsxQuoteStyle": "double",
       "semicolons": "always"
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": false
+    },
+    "linter": {
+      "enabled": false
     }
   }
 }

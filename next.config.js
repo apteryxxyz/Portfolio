@@ -1,8 +1,7 @@
-import withBundleAnalyser from '@next/bundle-analyzer';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  typescript: { ignoreBuildErrors: true },
 
   redirects: () => [
     {
@@ -26,16 +25,14 @@ const nextConfig = {
       permanent: false,
     },
   ],
-
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
-  },
 };
 
-export default withBundleAnalyser({
-  enabled: process.env.ANALYSE === 'true',
-})(nextConfig);
+const truthy = (v) => ['true', '1', 'yes', 'y'].includes(v);
+export default [
+  truthy(process.env.ANALYSE) &&
+    (await import('@next/bundle-analyzer')).default({ enabled: true }),
+  !truthy(process.env.TURBOPACK) &&
+    (await import('@million/lint')).next({ rsc: true }),
+]
+  .filter(Boolean)
+  .reduce((acc, curr) => curr(acc), nextConfig);

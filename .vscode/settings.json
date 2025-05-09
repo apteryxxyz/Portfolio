@@ -1,20 +1,6 @@
 {
-  "editor.formatOnSave": true,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/node_modules": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit"
-  },
-  "cSpell.language": "en-GB",
-  "cSpell.words": [],
-  "tailwindCSS.experimental.configFile": "./tailwind.config.cjs"
+  "cSpell.language": "en-AU",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
