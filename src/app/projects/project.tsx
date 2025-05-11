@@ -74,11 +74,11 @@ export function ProjectCard(project: Project) {
         {project.timeline && (
           <span className="flex items-center gap-1">
             <Calendar className="size-4" />
-            <span>{project.timeline.start.toLocaleDateString()}</span>
+            <span>{project.timeline.start.toLocaleDateString('en-NZ')}</span>
             <span className="text-muted-foreground">
               {' – '}
               {project.timeline.end
-                ? project.timeline.end.toLocaleDateString()
+                ? project.timeline.end.toLocaleDateString('en-NZ')
                 : 'Present'}
             </span>
           </span>
