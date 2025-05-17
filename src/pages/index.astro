@@ -17,13 +17,17 @@ import TitleCard from '../components/home/title-card.astro';
     <NameCard
       className="col-span-full lg:col-span-1 lg:col-start-2 lg:row-span-2 lg:row-start-3"
     />
-    <AboutCard
-      id="about"
-      className="col-span-full lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateX(-100px)] delay-400"
+    <LocationCard
+      id="location"
+      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-3 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
     />
     <TitleCard
       id="title"
       className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-3 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
+    />
+    <AboutCard
+      id="about"
+      className="col-span-full lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateX(-100px)] delay-400"
     />
     <ProjectsButton
       id="button"
@@ -36,10 +40,6 @@ import TitleCard from '../components/home/title-card.astro';
     <EducationCard
       id="education"
       className="col-span-full lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-5 opacity-0 animate-in [--initial-transform:translateX(100px)] delay-300"
-    />
-    <LocationCard
-      id="location"
-      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-3 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
     />
   </div>
 </Layout>

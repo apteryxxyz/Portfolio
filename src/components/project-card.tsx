@@ -7,6 +7,7 @@ import {
   PauseCircle,
   PlayCircle,
 } from 'lucide-react';
+import { type Project, ProjectStatus } from '../functions/projects.ts';
 import { Badge } from './ui/badge.tsx';
 import { Button } from './ui/button.tsx';
 import {
@@ -16,7 +17,6 @@ import {
   CardHeader,
   CardTitle,
 } from './ui/card.tsx';
-import { type Project, ProjectStatus } from '../functions/projects.ts';
 
 export function ProjectCard(project: Project) {
   const links = project.providers.filter((p) => p.url);
