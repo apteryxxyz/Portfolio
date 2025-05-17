@@ -3,9 +3,11 @@
   "packageManager": "pnpm@10.10.0",
   "type": "module",
   "scripts": {
+    "lint": "biome lint .",
+    "format": "biome check . --write",
     "dev": "astro dev",
     "build": "astro build",
-    "start": "wrangler dev ./dist/_worker.js/index.js"
+    "start": "wrangler dev"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.9",
@@ -15,12 +17,12 @@
     "class-variance-authority": "^0.7.1",
     "devicons-react": "^1.4.1",
     "lucide-react": "^0.510.0",
-    "motion": "^12.12.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^12.5.3",
     "@astrojs/react": "^4.2.7",
     "@biomejs/biome": "^1.9.4",
     "@tailwindcss/vite": "^4.1.7",
