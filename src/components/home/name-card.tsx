@@ -1,9 +1,9 @@
 import GitHub from 'devicons-react/icons/GithubOriginal';
-import { Discord } from '~/components/icons/discord';
-import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
-import { Card, CardHeader, CardTitle } from '~/components/ui/card';
+import { Discord } from '../icons/discord';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Card, CardHeader, CardTitle } from '../ui/card';
 
-export function NameCard({
+export default function NameCard({
   ...props
 }: React.ComponentPropsWithoutRef<typeof Card>) {
   return (
