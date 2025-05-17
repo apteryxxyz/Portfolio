@@ -1,0 +1,17 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx';
+import EducationItem from './education-item.astro';
+---
+
+<Card {...Astro.props}>
+  <CardHeader className="gap-2">
+    <CardTitle className="text-3xl">Education</CardTitle>
+  </CardHeader>
+
+  <CardContent>
+    <EducationItem
+      title="Diploma in Software Development"
+      description="Study explored software development across web, desktop, and game platforms. Assessments included theory and practical exams, assignments, and project reports detailing objectives, methods, results, and conclusions. I also recorded presentations to showcase my work."
+    />
+  </CardContent>
+</Card>

@@ -1,0 +1,45 @@
+---
+import Layout from './_layout.astro';
+
+import AboutCard from '../components/home/about-card.astro';
+import EducationCard from '../components/home/education-card.astro';
+import LocationCard from '../components/home/location-card.astro';
+import NameCard from '../components/home/name-card.tsx';
+import ProjectsButton from '../components/home/projects-button.tsx';
+import TechnologiesCard from '../components/home/technologies-card.astro';
+import TitleCard from '../components/home/title-card.astro';
+---
+
+<Layout>
+  <div
+    class="grid grid-cols-1 gap-5 overflow-hidden p-5 lg:grid-cols-3 lg:grid-rows-6"
+  >
+    <NameCard
+      className="col-span-full lg:col-span-1 lg:col-start-2 lg:row-span-2 lg:row-start-3"
+    />
+    <AboutCard
+      id="about"
+      className="col-span-full lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateX(-100px)] delay-400"
+    />
+    <TitleCard
+      id="title"
+      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-3 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
+    />
+    <ProjectsButton
+      id="button"
+      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-1 lg:row-start-4 opacity-0 animate-in [--initial-transform:translateY(100px)] delay-200"
+    />
+    <TechnologiesCard
+      id="technologies"
+      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-3 lg:row-start-4 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-300"
+    />
+    <EducationCard
+      id="education"
+      className="col-span-full lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-5 opacity-0 animate-in [--initial-transform:translateX(100px)] delay-300"
+    />
+    <LocationCard
+      id="location"
+      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-3 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
+    />
+  </div>
+</Layout>

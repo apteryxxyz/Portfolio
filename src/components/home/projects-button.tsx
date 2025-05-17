@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import { twMerge as cn } from 'tailwind-merge';
-import { Button } from '~/components/ui/button';
+import { Button } from '~/components/ui/button.tsx';
 
-export function QuoteCard({
+export default function QuoteCard({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Button>) {
@@ -12,9 +11,9 @@ export function QuoteCard({
       {...props}
       asChild
     >
-      <Link href="/projects" className="!text-3xl font-semibold">
+      <a href="/projects" className="!text-3xl font-semibold">
         Projects →
-      </Link>
+      </a>
     </Button>
   );
 }

@@ -1,6 +1,4 @@
 node_modules/
-.ignore/
-.million/
-.next/
+.astro/
+.wrangler/
 dist/
-.env*.local

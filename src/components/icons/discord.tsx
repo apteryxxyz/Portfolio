@@ -1,4 +1,4 @@
-export function Discord({
+export default function Discord({
   size,
   ...props
 }: React.ComponentPropsWithoutRef<'svg'> & { size?: number }) {
