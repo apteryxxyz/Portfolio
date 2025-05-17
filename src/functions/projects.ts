@@ -1,6 +1,6 @@
 import { ChromePlain, GithubOriginal, GooglePlain } from 'devicons-react';
 import { Globe } from 'lucide-react';
-import { Discord } from '~/components/icons/discord';
+import Discord from '../components/icons/discord.tsx';
 
 export interface Project {
   status: ProjectStatus;

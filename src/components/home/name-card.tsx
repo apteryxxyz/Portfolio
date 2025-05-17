@@ -1,7 +1,7 @@
 import GitHub from 'devicons-react/icons/GithubOriginal';
-import { Discord } from '../icons/discord';
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { Card, CardHeader, CardTitle } from '../ui/card';
+import Discord from '../icons/discord.tsx';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar.tsx';
+import { Card, CardHeader, CardTitle } from '../ui/card.tsx';
 
 export default function NameCard({
   ...props

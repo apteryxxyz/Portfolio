@@ -7,16 +7,16 @@ import {
   PauseCircle,
   PlayCircle,
 } from 'lucide-react';
-import { Badge } from '~/components/ui/badge';
-import { Button } from '~/components/ui/button';
+import { Badge } from './ui/badge.tsx';
+import { Button } from './ui/button.tsx';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '~/components/ui/card';
-import { type Project, ProjectStatus } from '../functions/projects';
+} from './ui/card.tsx';
+import { type Project, ProjectStatus } from '../functions/projects.ts';
 
 export function ProjectCard(project: Project) {
   const links = project.providers.filter((p) => p.url);
@@ -57,23 +57,23 @@ export function ProjectCard(project: Project) {
       <CardContent className="flex flex-wrap gap-3">
         <span className="flex items-center gap-1">
           {project.status === ProjectStatus.Active && (
-            <PlayCircle class="size-4 text-green-500" />
+            <PlayCircle className="size-4 text-green-500" />
           )}
           {project.status === ProjectStatus.Passive && (
-            <Clock class="size-4 text-amber-500" />
+            <Clock className="size-4 text-amber-500" />
           )}
           {project.status === ProjectStatus.OnHold && (
-            <PauseCircle class="size-4 text-orange-500" />
+            <PauseCircle className="size-4 text-orange-500" />
           )}
           {project.status === ProjectStatus.Archived && (
-            <Archive class="size-4 text-gray-500" />
+            <Archive className="size-4 text-gray-500" />
           )}
           {project.status}
         </span>
 
         {project.timeline && (
           <span className="flex items-center gap-1">
-            <Calendar class="size-4" />
+            <Calendar className="size-4" />
             <span>{project.timeline.start.toLocaleDateString('en-NZ')}</span>
             <span className="text-muted-foreground">
               {' – '}
@@ -86,14 +86,14 @@ export function ProjectCard(project: Project) {
 
         {installs > 5 && (
           <span className="flex items-center gap-1">
-            <Download class="size-4" />
+            <Download className="size-4" />
             <span>{installs.toLocaleString()} Installs</span>
           </span>
         )}
 
         {likes > 5 && (
           <span className="flex items-center gap-1">
-            <Heart class="size-4" />
+            <Heart className="size-4" />
             <span>{likes.toLocaleString()} Likes</span>
           </span>
         )}
@@ -103,7 +103,7 @@ export function ProjectCard(project: Project) {
         {links.map(({ icon: Icon, name, url }) => (
           <Button key={url} asChild>
             <a href={url} target="_blank" rel="noopener noreferrer">
-              {Icon && <Icon className='grayscale' />} {name}
+              {Icon && <Icon className="grayscale" />} {name}
             </a>
           </Button>
         ))}

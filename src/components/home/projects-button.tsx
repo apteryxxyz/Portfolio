@@ -1,5 +1,5 @@
 import { twMerge as cn } from 'tailwind-merge';
-import { Button } from '~/components/ui/button';
+import { Button } from '~/components/ui/button.tsx';
 
 export default function QuoteCard({
   className,
