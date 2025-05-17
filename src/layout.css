@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss-motion";
 @import "tw-animate-css";
 
 :root {
@@ -54,6 +53,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --animate-in: fade-in 0.5s forwards;
 }
 
 @layer base {
@@ -66,3 +67,14 @@
 }
 
 @custom-variant scripting (@media (scripting: enabled));
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: var(--initial-transform);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
