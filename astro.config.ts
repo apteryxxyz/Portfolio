@@ -1,3 +1,5 @@
+/// <reference types="astro/client" />
+
 import { defineConfig } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
@@ -13,7 +15,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      alias: { 'react-dom/server': 'react-dom/server.edge' },
+      alias: import.meta.env.PROD
+        ? { 'react-dom/server': 'react-dom/server.edge' }
+        : {},
     },
   },
 });
