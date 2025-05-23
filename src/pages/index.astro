@@ -12,34 +12,28 @@ import TitleCard from '../components/home/title-card.astro';
 
 <Layout>
   <div
-    class="grid grid-cols-1 gap-5 overflow-hidden p-5 lg:grid-cols-3 lg:grid-rows-6"
+    class="grid grid-cols-1 gap-5 p-5 lg:grid-cols-3 lg:grid-rows-6"
   >
     <NameCard
       className="col-span-full lg:col-span-1 lg:col-start-2 lg:row-span-2 lg:row-start-3"
     />
     <LocationCard
-      id="location"
-      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-3 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
+      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-3 lg:row-start-1 [--initial-transform:translateX(100px)] lg:opacity-0 lg:animate-in lg:delay-200" 
     />
     <TitleCard
-      id="title"
-      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-3 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-100"
+      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-1 lg:row-start-3"
     />
     <AboutCard
-      id="about"
-      className="col-span-full lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1 opacity-0 animate-in [--initial-transform:translateX(-100px)] delay-400"
+      className="col-span-full lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1 [--initial-transform:translateY(-100px)] lg:opacity-0 lg:animate-in lg:delay-100"
     />
     <ProjectsButton
-      id="button"
-      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-1 lg:row-start-4 opacity-0 animate-in [--initial-transform:translateY(100px)] delay-200"
+      className="col-span-full lg:col-span-1 lg:col-start-3 lg:row-span-1 lg:row-start-4"
     />
     <TechnologiesCard
-      id="technologies"
-      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-3 lg:row-start-4 opacity-0 animate-in [--initial-transform:translateY(-100px)] delay-300"
+      className="col-span-full lg:col-span-1 lg:col-start-1 lg:row-span-3 lg:row-start-4 [--initial-transform:translateX(-100px)] lg:opacity-0 lg:animate-in lg:delay-200"
     />
     <EducationCard
-      id="education"
-      className="col-span-full lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-5 opacity-0 animate-in [--initial-transform:translateX(100px)] delay-300"
+      className="col-span-full lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-5 [--initial-transform:translateY(100px)] lg:opacity-0 lg:animate-in lg:delay-100"
     />
   </div>
 </Layout>

@@ -1,6 +1,6 @@
 import GitHub from 'devicons-react/icons/GithubOriginal';
 import Discord from '../icons/discord.tsx';
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar.tsx';
+import { Avatar } from '../ui/avatar.tsx';
 import { Card, CardHeader, CardTitle } from '../ui/card.tsx';
 
 export default function NameCard({
@@ -10,8 +10,7 @@ export default function NameCard({
     <Card {...props}>
       <CardHeader className="flex h-full flex-col items-center justify-center gap-2">
         <Avatar className="size-14">
-          <AvatarImage src="https://github.com/apteryxxyz.png" alt="Apteryx" />
-          <AvatarFallback>K</AvatarFallback>
+          <img src="https://github.com/apteryxxyz.png" alt="Apteryx" />
         </Avatar>
 
         <CardTitle className="space-x-2 text-3xl">

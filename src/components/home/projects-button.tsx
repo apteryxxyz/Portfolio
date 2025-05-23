@@ -7,7 +7,7 @@ export default function QuoteCard({
 }: React.ComponentPropsWithoutRef<typeof Button>) {
   return (
     <Button
-      className={cn('h-full cursor-pointer', className)}
+      className={cn('h-full cursor-pointer py-6', className)}
       {...props}
       asChild
     >
