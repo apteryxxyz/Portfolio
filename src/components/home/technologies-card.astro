@@ -1,26 +1,27 @@
 ---
-// import VercelIcon from 'devicons-react/icons/VercelOriginal';
-import BunIcon from 'devicons-react/icons/BunPlain';
-// import CPlusPlusIcon from 'devicons-react/icons/CplusplusOriginal';
-import CSharpIcon from 'devicons-react/icons/CsharpOriginal';
-import Css3Icon from 'devicons-react/icons/Css3Original';
-import DockerIcon from 'devicons-react/icons/DockerOriginal';
-import FigmaIcon from 'devicons-react/icons/FigmaOriginal';
-import GitIcon from 'devicons-react/icons/GitOriginal';
-// import GitHubIcon from 'devicons-react/icons/GithubOriginal';
-import Html5Icon from 'devicons-react/icons/Html5Original';
-// import JavaScriptIcon from 'devicons-react/icons/JavascriptOriginal';
-import MongoDbIcon from 'devicons-react/icons/MongodbOriginal';
-import NextJsIcon from 'devicons-react/icons/NextjsOriginal';
-// import NginxIcon from 'devicons-react/icons/NginxOriginal';
-import NodeJsIcon from 'devicons-react/icons/NodejsOriginal';
-import PrismaIcon from 'devicons-react/icons/PrismaOriginal';
-import RaspberryPiIcon from 'devicons-react/icons/RaspberrypiOriginal';
-import ReactIcon from 'devicons-react/icons/ReactOriginal';
-import TailwindCssIcon from 'devicons-react/icons/TailwindcssOriginal';
-import TypeScriptIcon from 'devicons-react/icons/TypescriptOriginal';
-import UnityIcon from 'devicons-react/icons/UnityOriginal';
-import UnrealEngineIcon from 'devicons-react/icons/UnrealengineOriginal';
+import {
+  SiTypescript as TypeScript,
+  SiReact as React,
+  SiNextdotjs as NextJs,
+  SiTailwindcss as TailwindCss,
+  SiNodedotjs as NodeJs,
+  SiCloudflare as Cloudflare,
+  SiDocker as Docker,
+  SiExpo as Expo,
+  SiPython as Python,
+  SiQt as Qt,
+  SiUnity as Unity,
+  SiUnrealengine as UnrealEngine,
+  SiGithub as GitHub,
+  SiFigma as Figma,
+  SiNotion as Notion,
+  SiTrello as Trello,
+  SiLinear as Linear,
+} from 'simple-icons';
+import {
+  CsharpOriginal as CSharp,
+  CplusplusOriginal as CPlusPlus, 
+} from 'dev-icons';
 
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx';
 import TechnologyItem from './technology-item.tsx';
@@ -32,47 +33,79 @@ import TechnologyItem from './technology-item.tsx';
   </CardHeader>
 
   <CardContent className="flex flex-wrap gap-2">
+    <!-- Web -->
+    <TechnologyItem name="TypeScript" icon={TypeScript} />
+    <TechnologyItem name="React" icon={React} />
+    <TechnologyItem name="Next.js" icon={NextJs} />
+    <TechnologyItem name="Tailwind CSS" icon={TailwindCss} />
+    <TechnologyItem name="Node.js" icon={NodeJs} />
+    <TechnologyItem name="Cloudflare" icon={Cloudflare} />
+    <TechnologyItem name="Docker" icon={Docker} />
+
+    <!-- Mobile -->
+    <!-- <TechnologyItem name="React Native" icon={React} /> -->
+    <TechnologyItem name="Expo" icon={Expo} />
+
+    <!-- Desktop / GUI -->
+    <TechnologyItem name="Python" icon={Python} />
+    <TechnologyItem name="C++" icon={CPlusPlus} />
+    <TechnologyItem name="Qt" icon={Qt} />
+
+    <!-- Game -->
+    <TechnologyItem name="Unity" icon={Unity} />
+    <TechnologyItem name="C#" icon={CSharp} />
+    <TechnologyItem name="Unreal Engine" icon={UnrealEngine} />
+
+    <!-- Workflow -->
+    <TechnologyItem name="GitHub" icon={GitHub} />
+    <TechnologyItem name="Figma" icon={Figma} />
+    <TechnologyItem name="Notion" icon={Notion} />
+    <TechnologyItem name="Trello" icon={Trello} />
+    <TechnologyItem name="Linear" icon={Linear} />
+
+    <!--
     {/* Languages */}
-    <TechnologyItem name="TypeScript" icon={TypeScriptIcon} />
-    {/* <TechnologyItem name="JavaScript" icon={JavaScriptIcon} /> */}
-    <TechnologyItem name="HTML" icon={Html5Icon} />
-    <TechnologyItem name="CSS" icon={Css3Icon} />
-    {/* <TechnologyItem name="C++" icon={CPlusPlusIcon} /> */}
-    <TechnologyItem name="C#" icon={CSharpIcon} />
+    <TechnologyItem name="TypeScript" icon={TypeScript} />
+    {/* <TechnologyItem name="JavaScript" icon={JavaScript} /> */}
+    <TechnologyItem name="HTML" icon={Html5} />
+    <TechnologyItem name="CSS" icon={Css3} />
+    {/* <TechnologyItem name="C++" icon={CPlusPlus} /> */}
+    <TechnologyItem name="C#" icon={CSharp} />
 
     <br />
 
     {/* Runtimes */}
-    <TechnologyItem name="Node.js" icon={NodeJsIcon} />
-    <TechnologyItem name="Bun" icon={BunIcon} />
+    <TechnologyItem name="Node.js" icon={NodeJs} />
+    <TechnologyItem name="Bun" icon={Bun} />
 
     {/* Frontend Frameworks */}
-    <TechnologyItem name="React" icon={ReactIcon} />
-    <TechnologyItem name="Next.js" icon={NextJsIcon} />
-    <TechnologyItem name="TailwindCSS" icon={TailwindCssIcon} />
+    <TechnologyItem name="React" icon={React} />
+    <TechnologyItem name="Next.js" icon={NextJs} />
+    <TechnologyItem name="TailwindCSS" icon={TailwindCss} />
 
     {/* Mobile Frameworks */}
-    <TechnologyItem name="React Native" icon={ReactIcon} />
+    <TechnologyItem name="React Native" icon={React} />
     {/* <TechnologyItem name="Expo" icon={ExpoOriginal} /> */}
 
     {/* Databases */}
-    <TechnologyItem name="Prisma" icon={PrismaIcon} />
-    <TechnologyItem name="MongoDB" icon={MongoDbIcon} />
+    <TechnologyItem name="Prisma" icon={Prisma} />
+    <TechnologyItem name="MongoDB" icon={MongoDb} />
     {/* <TechnologyItem name="CockroachDB" icon={CockroachDbOriginal} /> */}
 
     {/* DevOps */}
-    <TechnologyItem name="Docker" icon={DockerIcon} />
-    <TechnologyItem name="Raspberry Pi" icon={RaspberryPiIcon} />
-    {/* <TechnologyItem name="Nginx" icon={NginxIcon} /> */}
-    {/* <TechnologyItem name="Vercel" icon={VercelIcon} /> */}
-    <TechnologyItem name="Git" icon={GitIcon} />
-    {/* <TechnologyItem name="GitHub" icon={GitHubIcon} /> */}
+    <TechnologyItem name="Docker" icon={Docker} />
+    <TechnologyItem name="Raspberry Pi" icon={RaspberryPi} />
+    {/* <TechnologyItem name="Nginx" icon={Nginx} /> */}
+    {/* <TechnologyItem name="Vercel" icon={Vercel} /> */}
+    <TechnologyItem name="Git" icon={Git} />
+    {/* <TechnologyItem name="GitHub" icon={GitHub} /> */}
 
     {/* Game Development */}
-    <TechnologyItem name="Unity" icon={UnityIcon} />
-    <TechnologyItem name="Unreal Engine" icon={UnrealEngineIcon} />
+    <TechnologyItem name="Unity" icon={Unity} />
+    <TechnologyItem name="Unreal Engine" icon={UnrealEngine} />
 
     {/* Design */}
-    <TechnologyItem name="Figma" icon={FigmaIcon} />
+    <TechnologyItem name="Figma" icon={Figma} />
+    -->
   </CardContent>
 </Card>

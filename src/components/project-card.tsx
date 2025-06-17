@@ -3,10 +3,10 @@ import {
   Calendar,
   Clock,
   Download,
-  Heart,
   PauseCircle,
   PlayCircle,
-} from 'lucide-react';
+  Star,
+} from 'lucide-icons';
 import { type Project, ProjectStatus } from '../functions/projects.ts';
 import { Badge } from './ui/badge.tsx';
 import { Button } from './ui/button.tsx';
@@ -18,10 +18,18 @@ import {
   CardTitle,
 } from './ui/card.tsx';
 
-export function ProjectCard(project: Project) {
+export async function ProjectCard(project: Project) {
   const links = project.providers.filter((p) => p.url);
-  const installs = project.providers.reduce((i, p) => i + (p.installs ?? 0), 0);
-  const likes = project.providers.reduce((i, p) => i + (p.likes ?? 0), 0);
+
+  let installs = 0;
+  let likes = 0;
+  for (const provider of project.providers) {
+    if (typeof provider.installs === 'number') installs += provider.installs;
+    if (typeof provider.installs === 'function')
+      installs += await provider.installs();
+    if (typeof provider.likes === 'number') likes += provider.likes;
+    if (typeof provider.likes === 'function') likes += await provider.likes();
+  }
 
   return (
     <Card
@@ -84,17 +92,17 @@ export function ProjectCard(project: Project) {
           </span>
         )}
 
-        {installs > 5 && (
+        {installs > 30 && (
           <span className="flex items-center gap-1">
             <Download className="size-4" />
             <span>{installs.toLocaleString()} Installs</span>
           </span>
         )}
 
-        {likes > 5 && (
+        {likes > 3 && (
           <span className="flex items-center gap-1">
-            <Heart className="size-4" />
-            <span>{likes.toLocaleString()} Likes</span>
+            <Star className="size-4" />
+            <span>{likes.toLocaleString()} Stars</span>
           </span>
         )}
       </CardContent>

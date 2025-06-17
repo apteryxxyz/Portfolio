@@ -1,21 +1,9 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip.tsx';
-
 export default function TechnologyItem({
-  name,
+  name: _name,
   icon: Icon,
 }: {
   name: string;
-  icon: React.FC<
-    React.ComponentPropsWithoutRef<'svg'> & { size?: number | string }
-  >;
+  icon: React.FC<Record<string, unknown>>;
 }) {
-  return (
-    <Tooltip>
-      <TooltipTrigger className="cursor-default">
-        <Icon size={48} className="grayscale" />
-      </TooltipTrigger>
-
-      <TooltipContent>{name}</TooltipContent>
-    </Tooltip>
-  );
+  return <Icon title={null} size={48} className="grayscale" />;
 }

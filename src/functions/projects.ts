@@ -1,6 +1,12 @@
-import { ChromePlain, GithubOriginal, GooglePlain } from 'devicons-react';
-import { Globe } from 'lucide-react';
-import Discord from '../components/icons/discord.tsx';
+import { Globe } from 'lucide-icons';
+import {
+  SiChromewebstore as ChromeWebStore,
+  SiDiscord as Discord,
+  SiGithub as Github,
+  SiGoogleplay as GooglePlay,
+  SiSteam as Steam,
+} from 'simple-icons';
+import { installs, likes } from './fetchers.ts';
 
 export interface Project {
   status: ProjectStatus;
@@ -46,8 +52,8 @@ export interface ProjectProvider {
   icon?: React.FC<{ className?: string }>;
   name: string;
   url?: string;
-  installs?: number;
-  likes?: number;
+  installs?: number | (() => Promise<number>);
+  likes?: number | (() => Promise<number>);
 }
 
 //
@@ -75,13 +81,13 @@ export const projects: Project[] = [
         icon: Discord,
         name: 'Discord App',
         url: 'https://evaluate.run/products/discord-bot',
-        installs: 361 + 409,
+        installs: 363 + 441,
       },
       {
-        icon: ChromePlain,
+        icon: ChromeWebStore,
         name: 'Browser Extension',
         url: 'https://evaluate.run/products/browser-extension',
-        installs: 19 + 1,
+        installs: 20 + 1,
       },
     ],
     colour: '#2fc186',
@@ -108,7 +114,7 @@ export const projects: Project[] = [
     },
     providers: [
       {
-        icon: GooglePlain,
+        icon: GooglePlay,
         name: 'Google Play',
         url: 'https://play.google.com/store/apps/details?id=xyz.apteryx.jacksucksatlife',
         installs: 1500,
@@ -129,13 +135,13 @@ export const projects: Project[] = [
     providers: [
       {
         name: 'NPM',
-        installs: 81000,
+        installs: installs.npm('next-ws'),
       },
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/next-ws',
-        likes: 250,
+        likes: likes.github('apteryxxyz/next-ws'),
       },
     ],
   },
@@ -160,7 +166,7 @@ export const projects: Project[] = [
     },
     providers: [
       {
-        icon: GooglePlain,
+        icon: GooglePlay,
         name: 'Google Play',
         url: 'https://play.google.com/store/apps/details?id=com.blackbox.darkviperau',
         installs: 2100,
@@ -181,13 +187,37 @@ export const projects: Project[] = [
     providers: [
       {
         name: 'NPM',
-        installs: 243000,
+        installs: installs.npm('enhanced-ms'),
       },
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/enhanced-ms',
-        likes: 16,
+        likes: likes.github('apteryxxyz/enhanced-ms'),
+      },
+    ],
+  },
+
+  {
+    status: ProjectStatus.Active,
+    id: 'steam-plugin-non-steam-playtimes',
+    name: 'Non-Steam Playtimes',
+    description: 'A Steam plugin that tracks playtime for non-Steam games.',
+    types: [ProjectType.Plugin],
+    roles: [ProjectRole.Developer],
+    technologies: ['Python', 'TypeScript'],
+    providers: [
+      {
+        icon: Steam,
+        name: 'Millennium',
+        url: 'https://steambrew.app/plugin?id=02bed50d10a8',
+        installs: installs.millennium('02bed50d10a8'),
+      },
+      {
+        icon: Github,
+        name: 'Source Code',
+        url: 'https://github.com/apteryxxyz/steam-plugin-non-steam-playtimes',
+        likes: likes.github('apteryxxyz/steam-plugin-non-steam-playtimes'),
       },
     ],
   },
@@ -195,7 +225,7 @@ export const projects: Project[] = [
   {
     status: ProjectStatus.Active,
     id: 'jellyfin-plugin-air-times',
-    name: 'Jellyfin.Plugin.AirTimes',
+    name: 'AirTimes',
     description:
       'Air Times is a Jellyfin plugin that provides accurate, localised series air times using data from TheTVDB.',
     types: [ProjectType.Plugin],
@@ -203,10 +233,10 @@ export const projects: Project[] = [
     technologies: ['C#'],
     providers: [
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/jellyfin-plugin-air-times',
-        likes: 2,
+        likes: likes.github('apteryxxyz/jellyfin-plugin-air-times'),
       },
     ],
   },
@@ -230,10 +260,10 @@ export const projects: Project[] = [
         url: 'https://qwaroo.vercel.app/',
       },
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/qwaroo',
-        likes: 3,
+        likes: likes.github('apteryxxyz/qwaroo'),
       },
     ],
     colour: '#3399ff',
@@ -254,10 +284,10 @@ export const projects: Project[] = [
     },
     providers: [
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/covidinnz',
-        likes: 1,
+        likes: likes.github('apteryxxyz/covidinnz'),
       },
     ],
     colour: '#ffe119',
@@ -282,10 +312,10 @@ export const projects: Project[] = [
         installs: 1000,
       },
       {
-        icon: GithubOriginal,
+        icon: Github,
         name: 'Source Code',
         url: 'https://github.com/ApteryxXYZ/Werewolf-Companion',
-        likes: 2,
+        likes: likes.github('ApteryxXYZ/Werewolf-Companion'),
       },
     ],
     colour: '#ff4183',

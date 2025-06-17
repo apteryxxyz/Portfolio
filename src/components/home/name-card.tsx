@@ -1,5 +1,5 @@
-import GitHub from 'devicons-react/icons/GithubOriginal';
-import Discord from '../icons/discord.tsx';
+import GitHub from 'dev-icons/icons/GithubOriginal';
+import { SiDiscord as Discord } from 'simple-icons';
 import { Avatar } from '../ui/avatar.tsx';
 import { Card, CardHeader, CardTitle } from '../ui/card.tsx';
 
