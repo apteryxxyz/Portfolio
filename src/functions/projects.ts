@@ -81,13 +81,13 @@ export const projects: Project[] = [
         icon: Discord,
         name: 'Discord App',
         url: 'https://evaluate.run/products/discord-bot',
-        installs: 363 + 441,
+        installs: 362 + 466,
       },
       {
         icon: ChromeWebStore,
         name: 'Browser Extension',
         url: 'https://evaluate.run/products/browser-extension',
-        installs: 20 + 1,
+        installs: 23 + 4,
       },
     ],
     colour: '#2fc186',
@@ -220,6 +220,30 @@ export const projects: Project[] = [
         likes: likes.github('apteryxxyz/steam-plugin-non-steam-playtimes'),
       },
     ],
+  },
+
+  {
+    status: ProjectStatus.Active,
+    id: 'steam-plugin-fullscreen-notifications-fix',
+    name: 'Fullscreen Notifications Fix',
+    description: 'A Steam plugin that fixes notifications not appearing when a fullscreen non-Steam app is focused.',
+    types: [ProjectType.Plugin],
+    roles: [ProjectRole.Developer],
+    technologies: ['TypeScript'],
+    providers: [
+      {
+        icon: Steam,
+        name: 'Millennium',
+        url: 'https://steambrew.app/plugin?id=84b2f76a6f1a',
+        installs: installs.millennium('84b2f76a6f1a'),
+      },
+      {
+        icon: Github,
+        name: 'Source Code',
+        url: 'https://github.com/apteryxxyz/steam-plugin-fullscreen-notifications-fix',
+        likes: likes.github('apteryxxyz/steam-plugin-fullscreen-notifications-fix'),
+      }
+    ]
   },
 
   {
