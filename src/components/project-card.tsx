@@ -7,7 +7,7 @@ import {
   PlayCircle,
   Star,
 } from 'lucide-icons';
-import { type Project, ProjectStatus } from '../functions/projects.ts';
+import { Project } from '../functions/projects.ts';
 import { Badge } from './ui/badge.tsx';
 import { Button } from './ui/button.tsx';
 import {
@@ -33,7 +33,7 @@ export async function ProjectCard(project: Project) {
 
   return (
     <Card
-      id={project.id}
+      id={project.name}
       className="border-t-4"
       style={{ borderTopColor: project.colour }}
     >
@@ -42,7 +42,7 @@ export async function ProjectCard(project: Project) {
           {project.name}
         </CardTitle>
 
-        {project.featured && <Badge variant="secondary">Featured</Badge>}
+        {/* {project.featured && <Badge variant="secondary">Featured</Badge>} */}
         {project.types.map((t) => (
           <Badge key={t} variant="outline">
             {t}
@@ -64,16 +64,16 @@ export async function ProjectCard(project: Project) {
 
       <CardContent className="flex flex-wrap gap-3">
         <span className="flex items-center gap-1">
-          {project.status === ProjectStatus.Active && (
+          {project.status === Project.Status.Active && (
             <PlayCircle className="size-4 text-green-500" />
           )}
-          {project.status === ProjectStatus.Passive && (
+          {project.status === Project.Status.Passive && (
             <Clock className="size-4 text-amber-500" />
           )}
-          {project.status === ProjectStatus.OnHold && (
+          {project.status === Project.Status.OnHold && (
             <PauseCircle className="size-4 text-orange-500" />
           )}
-          {project.status === ProjectStatus.Archived && (
+          {project.status === Project.Status.Archived && (
             <Archive className="size-4 text-gray-500" />
           )}
           {project.status}
@@ -107,15 +107,17 @@ export async function ProjectCard(project: Project) {
         )}
       </CardContent>
 
-      <CardFooter className="flex flex-wrap gap-1">
-        {links.map(({ icon: Icon, name, url }) => (
-          <Button key={url} asChild>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {Icon && <Icon className="grayscale" />} {name}
-            </a>
-          </Button>
-        ))}
-      </CardFooter>
+      {links.length > 0 && (
+        <CardFooter className="flex flex-wrap gap-1">
+          {links.map(({ icon: Icon, name, url }) => (
+            <Button key={url} asChild>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {Icon && <Icon className="grayscale" />} {name}
+              </a>
+            </Button>
+          ))}
+        </CardFooter>
+      )}
     </Card>
   );
 }
