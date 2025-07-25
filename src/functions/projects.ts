@@ -82,13 +82,13 @@ export default [
         icon: Discord,
         name: 'Discord App',
         url: 'https://evaluate.run/products/discord-bot',
-        installs: 362 + 466,
+        installs: 366 + 471,
       },
       {
         icon: ChromeWebStore,
         name: 'Browser Extension',
         url: 'https://evaluate.run/products/browser-extension',
-        installs: 23 + 4,
+        installs: 24 + 4,
       },
     ],
   },
@@ -191,7 +191,7 @@ export default [
   },
 
   {
-    name: 'Non-Steam Playtimes',
+    name: 'Steam Non-Steam Playtimes',
     description: 'A Steam plugin that tracks playtime for non-Steam games.',
     types: [Project.Type.Plugin],
     status: Project.Status.Active,
@@ -214,7 +214,7 @@ export default [
   },
 
   {
-    name: 'Fullscreen Notifications Fix',
+    name: 'Steam Fullscreen Notifications Fix',
     description:
       'A Steam plugin that fixes notifications not appearing when a fullscreen non-Steam app is focused.',
     types: [Project.Type.Plugin],
@@ -231,16 +231,16 @@ export default [
       {
         icon: Github,
         name: 'Source Code',
-        url: 'https://github.com/apteryxxyz/steam-plugin-fullscreen-notifications-fix',
+        url: 'https://github.com/apteryxxyz/steam-fullscreen-notifications-fix',
         likes: likes.github(
-          'apteryxxyz/steam-plugin-fullscreen-notifications-fix',
+          'apteryxxyz/steam-fullscreen-notifications-fix',
         ),
       },
     ],
   },
 
   {
-    name: 'Air Times',
+    name: 'Jellyfin Air Times',
     description:
       'Air Times is a Jellyfin plugin that provides accurate, localised series air times using data from TheTVDB.',
     types: [Project.Type.Plugin],
@@ -251,8 +251,8 @@ export default [
       {
         icon: Github,
         name: 'Source Code',
-        url: 'https://github.com/apteryxxyz/jellyfin-plugin-air-times',
-        likes: likes.github('apteryxxyz/jellyfin-plugin-air-times'),
+        url: 'https://github.com/apteryxxyz/jellyfin-air-times',
+        likes: likes.github('apteryxxyz/jellyfin-air-times'),
       },
     ],
   },
