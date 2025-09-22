@@ -124,7 +124,7 @@ export default [
       'A soundboard app featuring many of the great phrases the content creator DarkViperAU has said, from questions to insults and even some strange noises.',
     colour: '#242448',
     types: [Project.Type.Mobile],
-    status: Project.Status.OnHold,
+    status: Project.Status.Passive,
     roles: [Project.Role.Developer],
     technologies: [
       'TypeScript',
