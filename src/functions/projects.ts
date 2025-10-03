@@ -82,7 +82,7 @@ export default [
         icon: Discord,
         name: 'Discord App',
         url: 'https://evaluate.run/products/discord-bot',
-        installs: 374 + 503,
+        installs: (375 + 503) * 1.5,
       },
       {
         icon: ChromeWebStore,
