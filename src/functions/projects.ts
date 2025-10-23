@@ -160,6 +160,10 @@ export default [
         installs: installs.npm('next-ws'),
       },
       {
+        name: 'NPM',
+        installs: installs.npm('next-ws-cli'),
+      },
+      {
         icon: Github,
         name: 'Source Code',
         url: 'https://github.com/apteryxxyz/next-ws',
