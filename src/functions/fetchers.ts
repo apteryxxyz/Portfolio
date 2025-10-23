@@ -1,11 +1,23 @@
 export namespace installs {
   export function npm(name: string) {
     return async () => {
-      return fetch(
-        `https://api.npmjs.org/downloads/point/1970-01-01:2100-01-01/${name}`,
-      )
+      console.log('requesting', name);
+      const date = await fetch(`https://registry.npmjs.org/${name}`)
         .then((r) => r.json())
-        .then((r) => Number(r.downloads));
+        .then((r) => new Date(r.time.created));
+      
+      let downloads = 0;
+      while (date < new Date()) {
+        const year = date.getFullYear();
+        console.log('requesting', name, year, 'and', year + 1);
+        const downs = await fetch(`https://api.npmjs.org/downloads/point/${year}-01-01:${year+1}-01-01/${name}`)
+          .then((r) => r.json())
+          .then((r) => Number(r.downloads));
+        downloads += downs;
+        date.setFullYear(date.getFullYear() + 1);
+      }
+
+      return downloads;
     };
   }
 
